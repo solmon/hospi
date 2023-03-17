@@ -30,6 +30,7 @@ import { SidebarHelp } from "../Sidebar/SidebarHelp";
 import React from "react";
 import { Scrollbars } from "react-custom-scrollbars";
 import { NavLink, useLocation } from "react-router-dom";
+import { v4 } from 'uuid'
 
 
 

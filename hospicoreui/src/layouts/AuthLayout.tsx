@@ -4,11 +4,15 @@ import Footer from "../components/Footer/Footer.js";
 // core components
 import AuthNavbar from "../components/Navbars/AuthNavbar.js";
 import React from "react";
-import { Redirect, Route, Switch } from "react-router-dom";
+// import { Redirect, Route, Switch } from "react-router-dom";
 import routes from "../routes";
 
-export default function Pages(props) {
-  const { ...rest } = props;
+export default function AuthLayout({
+  children,
+}:{
+  children: React.ReactNode;
+}) {
+  // const { ...rest } = props;
   // ref for the wrapper div
   const wrapper = React.createRef();
   React.useEffect(() => {
@@ -16,7 +20,7 @@ export default function Pages(props) {
     // Specify how to clean up after this effect:
     return function cleanup() {};
   });
-  const getActiveRoute = (routes) => {
+  const getActiveRoute = (routes:any):any => {
     let activeRoute = "Default Brand Text";
     for (let i = 0; i < routes.length; i++) {
       if (routes[i].collapse) {
@@ -39,7 +43,7 @@ export default function Pages(props) {
     }
     return activeRoute;
   };
-  const getActiveNavbar = (routes) => {
+  const getActiveNavbar = (routes:any):any => {
     let activeNavbar = false;
     for (let i = 0; i < routes.length; i++) {
       if (routes[i].category) {
@@ -59,27 +63,27 @@ export default function Pages(props) {
     }
     return activeNavbar;
   };
-  const getRoutes = (routes) => {
-    return routes.map((prop, key) => {
-      if (prop.collapse) {
-        return getRoutes(prop.views);
-      }
-      if (prop.category === "account") {
-        return getRoutes(prop.views);
-      }
-      if (prop.layout === "/auth") {
-        return (
-          <Route
-            path={prop.layout + prop.path}
-            component={prop.component}
-            key={key}
-          />
-        );
-      } else {
-        return null;
-      }
-    });
-  };
+  // const getRoutes = (routes) => {
+  //   return routes.map((prop, key) => {
+  //     if (prop.collapse) {
+  //       return getRoutes(prop.views);
+  //     }
+  //     if (prop.category === "account") {
+  //       return getRoutes(prop.views);
+  //     }
+  //     if (prop.layout === "/auth") {
+  //       return (
+  //         <Route
+  //           path={prop.layout + prop.path}
+  //           component={prop.component}
+  //           key={key}
+  //         />
+  //       );
+  //     } else {
+  //       return null;
+  //     }
+  //   });
+  //};
   const navRef = React.useRef();
   document.documentElement.dir = "ltr";
   return (
@@ -89,10 +93,11 @@ export default function Pages(props) {
       </Portal>
       <Box w='100%'>
         <Box ref={wrapper} w='100%'>
-          <Switch>
+          {/* <Switch>
             {getRoutes(routes)}
             <Redirect from='/auth' to='/auth/login-page' />
-          </Switch>
+          </Switch> */}
+          {children}
         </Box>
       </Box>
       <Box px='24px' mx='auto' width='1044px' maxW='100%' mt='60px'>

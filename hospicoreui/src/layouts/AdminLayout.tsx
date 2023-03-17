@@ -17,7 +17,7 @@ import {
 // Layout components
 import AdminNavbar from "../components/Navbars/AdminNavbar.js";
 import Sidebar from "../components/Sidebar/Sidebar.js";
-import React, { useState } from "react";
+import React, { useState, createElement } from "react";
 import { Navigate, Route, Routes } from "react-router-dom";
 import routes from "../routes";
 // Custom Chakra theme
@@ -28,8 +28,13 @@ import PanelContainer from "../components/Layout/PanelContainer";
 import PanelContent from "../components/Layout/PanelContent";
 import bgAdmin from "../assets/img/admin-background.png";
 
-export default function Dashboard(props) {
-  const { ...rest } = props;
+export default function AdminLayout({
+  children,
+}:{
+  children: React.ReactNode;
+}) {
+
+  // const { ...rest } = props;
   // states and functions
   const [fixed, setFixed] = useState(false);
   const { colorMode } = useColorMode();
@@ -37,7 +42,7 @@ export default function Dashboard(props) {
   const getRoute = () => {
     return window.location.pathname !== "/admin/full-screen-maps";
   };
-  const getActiveRoute = (routes) => {
+  const getActiveRoute = (routes:any): any => {
     let activeRoute = "Default Brand Text";
     for (let i = 0; i < routes.length; i++) {
       if (routes[i].collapse) {
@@ -61,7 +66,7 @@ export default function Dashboard(props) {
     return activeRoute;
   };
   // This changes navbar state(fixed or not)
-  const getActiveNavbar = (routes) => {
+  const getActiveNavbar = (routes: any):any => {
     let activeNavbar = false;
     for (let i = 0; i < routes.length; i++) {
       if (routes[i].category) {
@@ -81,27 +86,32 @@ export default function Dashboard(props) {
     }
     return activeNavbar;
   };
-  const getRoutes = (routes) => {
-    return routes.map((prop, key) => {
-      if (prop.collapse) {
-        return getRoutes(prop.views);
-      }
-      if (prop.category === "account") {
-        return getRoutes(prop.views);
-      }
-      if (prop.layout === "/admin") {
-        return (
-          <Route
-            path={prop.layout + prop.path}
-            component={prop.component}
-            key={prop.ikey}
-          />
-        );
-      } else {
-        return null;
-      }
-    });
-  };
+  // const getRoutes = (routes:any): any => {
+  //   return routes.map((prop:any, key:any) => {
+  //     // debugger;
+  //     if (prop.collapse) {
+  //       return getRoutes(prop.views);
+  //     }
+  //     if (prop.category === "account") {
+  //       return getRoutes(prop.views);
+  //     }
+  //     if (prop.layout === "/admin") {
+  //       console.log(prop.layout + prop.path);
+  //       return (
+  //         // <Route
+  //         //   path={prop.layout + prop.path}
+  //         //   // element={createElement(prop.component)}
+  //         //   element={<DashboardVW/>}
+  //         //   // component={prop.component}
+  //         //   key={prop.ikey}
+  //         // />
+  //         </>
+  //       );
+  //     } else {
+  //       return null;
+  //     }
+  //   });
+  //};
   const { isOpen, onOpen, onClose } = useDisclosure();
   document.documentElement.dir = "ltr";
   // Chakra Color Mode
@@ -138,7 +148,7 @@ export default function Dashboard(props) {
           </Stack>
         }
         display='none'
-        {...rest}
+        // {...rest}
       />
       <MainPanel
         w={{
@@ -151,19 +161,22 @@ export default function Dashboard(props) {
             brandText={getActiveRoute(routes)}
             secondary={getActiveNavbar(routes)}
             fixed={fixed}
-            {...rest}
+            // {...rest}
           />
         </Portal>
         {getRoute() ? (
           <PanelContent>
             <PanelContainer>
-              <Routes>
+            
+              {/* <Routes>
                 {getRoutes(routes)}
-                <Route path={'/admin'} element={<Navigate to="/admin/dashboard"/>} />
-              </Routes>
+                <Route path={'/admin/'} element={<Navigate to="/admin/dashboard"/>} />
+              </Routes> */}
+              {children}
             </PanelContainer>
           </PanelContent>
         ) : null}
+        <Box>Sample Sol</Box>
         <Footer />
         <Portal>
           <FixedPlugin
