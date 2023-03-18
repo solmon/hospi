@@ -1,10 +1,5 @@
 import '@/styles/globals.css'
 
-
-// import AuthLayout from "../layouts/Auth";
-// import AdminLayout from "../layouts/Admin";
-// import RTLLayout from "../layouts/RTL"; // Chakra imports
-
 import type { AppProps } from 'next/app'
 import app from '@/lib/app';
 // import {useEffect, useState} from 'react';
@@ -29,7 +24,7 @@ export default function App({ Component, pageProps }: AppPropsWithLayout) {
   // return render ? (
   return (
     <ChakraProvider theme={theme} resetCSS={false}>
-      <Component {...pageProps} />
+      {getLayout(<Component {...props} />)}
       {/* <HashRouter>
         <Routes>
           <Route path={`/auth`} element={<AuthLayout />} />

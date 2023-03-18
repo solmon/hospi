@@ -5,9 +5,9 @@ import Dashboard from "@/views/Dashboard/Dashboard"
 
 const AdminDashboard: NextPageWithLayout=() =>{
     const [visible, setVisible] = useState(false);
-
+    
     return (
-       <Dashboard/>
+      <Dashboard/>      
     );
 };
 

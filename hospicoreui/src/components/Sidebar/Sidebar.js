@@ -29,7 +29,9 @@ import { HSeparator } from "../Separator/Separator";
 import { SidebarHelp } from "../Sidebar/SidebarHelp";
 import React from "react";
 import { Scrollbars } from "react-custom-scrollbars";
-import { NavLink, useLocation } from "react-router-dom";
+// import { NavLink, useLocation } from "react-router-dom";
+import {useRouter} from 'next/router';
+import Link from 'next/link';
 import { v4 } from 'uuid'
 
 
@@ -38,7 +40,8 @@ import { v4 } from 'uuid'
 
 function Sidebar(props) {
   // to check for active links and opened collapses
-  let location = useLocation();
+  // let location = useLocation();
+  let location = useRouter();
   // this is for the rest of the collapses
   const [state, setState] = React.useState({});
   const mainPanel = React.useRef();
@@ -79,7 +82,7 @@ function Sidebar(props) {
               }}
               py="12px"
             >
-              {document.documentElement.dir === "rtl"
+              {typeof document !== "undefined" && document.documentElement.dir === "rtl"
                 ? prop.rtlName
                 : prop.name}
             </Text>
@@ -89,7 +92,7 @@ function Sidebar(props) {
       }
       // console.log(prop.ikey);
       return (
-        <NavLink to={prop.layout + prop.path} key={prop.ikey}>
+        <Link href={prop.layout + prop.path} key={prop.ikey}>
           {activeRoute(prop.layout + prop.path) === "active" ? (
             <Button
               boxSize="initial"
@@ -137,7 +140,7 @@ function Sidebar(props) {
                   </IconBox>
                 )}
                 <Text color={activeColor} my="auto" fontSize="sm">
-                  {document.documentElement.dir === "rtl"
+                  {typeof document !== "undefined" && document.documentElement.dir === "rtl"
                     ? prop.rtlName
                     : prop.name}
                 </Text>
@@ -188,14 +191,14 @@ function Sidebar(props) {
                   </IconBox>
                 )}
                 <Text color={inactiveColor} my="auto" fontSize="sm">
-                  {document.documentElement.dir === "rtl"
+                  {typeof document !== "undefined" && document.documentElement.dir === "rtl"
                     ? prop.rtlName
                     : prop.name}
                 </Text>
               </Flex>
             </Button>
           )}
-        </NavLink>
+        </Link>
       );
     });
   };
@@ -239,7 +242,7 @@ function Sidebar(props) {
           <Scrollbars
             autoHide
             renderTrackVertical={
-              document.documentElement.dir === "rtl"
+              typeof document !== "undefined" && document.documentElement.dir === "rtl"
                 ? renderTrackRTL
                 : renderTrack
             }
@@ -248,7 +251,7 @@ function Sidebar(props) {
               renderThumbDark
             )}
             renderView={
-              document.documentElement.dir === "rtl"
+              typeof document !== "undefined" && document.documentElement.dir === "rtl"
                 ? renderViewRTL
                 : renderView
             }
@@ -269,7 +272,7 @@ function Sidebar(props) {
 
 export function SidebarResponsive(props) {
   // to check for active links and opened collapses
-  let location = useLocation();
+  let location = useRouter();
   const { logo, routes, colorMode, hamburgerColor, ...rest } = props;
 
   // this is for the rest of the collapses
@@ -314,7 +317,7 @@ export function SidebarResponsive(props) {
               }}
               py="12px"
             >
-              {document.documentElement.dir === "rtl"
+              {typeof document !== "undefined" && document.documentElement.dir === "rtl"
                 ? prop.rtlName
                 : prop.name}
             </Text>
@@ -323,7 +326,7 @@ export function SidebarResponsive(props) {
         );
       }
       return (
-        <NavLink to={prop.layout + prop.path} key={prop.ikey}>
+        <Link href={prop.layout + prop.path} key={prop.ikey}>
           {activeRoute(prop.layout + prop.path) === "active" ? (
             <Button
               boxSize="initial"
@@ -369,7 +372,7 @@ export function SidebarResponsive(props) {
                   </IconBox>
                 )}
                 <Text color={activeColor} my="auto" fontSize="sm">
-                  {document.documentElement.dir === "rtl"
+                  {typeof document !== "undefined" && document.documentElement.dir === "rtl"
                     ? prop.rtlName
                     : prop.name}
                 </Text>
@@ -419,14 +422,14 @@ export function SidebarResponsive(props) {
                   </IconBox>
                 )}
                 <Text color={inactiveColor} my="auto" fontSize="sm">
-                  {document.documentElement.dir === "rtl"
+                  {typeof document !== "undefined" && document.documentElement.dir === "rtl"
                     ? prop.rtlName
                     : prop.name}
                 </Text>
               </Flex>
             </Button>
           )}
-        </NavLink>
+        </Link>
       );
     });
   };
@@ -462,7 +465,7 @@ export function SidebarResponsive(props) {
       <Drawer
         isOpen={isOpen}
         onClose={onClose}
-        placement={document.documentElement.dir === "rtl" ? "right" : "left"}
+        placement={typeof document !== "undefined" && document.documentElement.dir === "rtl" ? "right" : "left"}
         finalFocusRef={btnRef}
       >
         <DrawerOverlay />

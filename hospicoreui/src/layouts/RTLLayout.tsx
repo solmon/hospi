@@ -13,7 +13,7 @@ import Footer from "../components/Footer/Footer.js";
 import AdminNavbar from "../components/Navbars/AdminNavbar.js";
 import Sidebar from "../components/Sidebar/Sidebar.js";
 import React, { useState } from "react";
-import { Redirect, Route, Switch } from "react-router-dom";
+// import { Redirect, Route, Switch } from "react-router-dom";
 import routes from "../routes";
 import FixedPlugin from "../components/FixedPlugin/FixedPlugin";
 // Custom components
@@ -27,8 +27,13 @@ import {
   ChakraLogoLight,
 } from "../components/Icons/Icons";
 import bgAdmin from "../assets/img/admin-background.png";
-export default function Dashboard(props) {
-  const { ...rest } = props;
+
+export default function RTLLayout({
+  children,
+}:{
+  children:React.ReactNode;
+}) {
+  // const { ...rest } = props;
   // states and functions
   const [sidebarVariant, setSidebarVariant] = useState("transparent");
   const [fixed, setFixed] = useState(false);
@@ -37,7 +42,7 @@ export default function Dashboard(props) {
   const getRoute = () => {
     return window.location.pathname !== "/admin/full-screen-maps";
   };
-  const getActiveRoute = (routes) => {
+  const getActiveRoute = (routes:any):any => {
     let activeRoute = "Default Brand Text";
     for (let i = 0; i < routes.length; i++) {
       if (routes[i].collapse) {
@@ -61,7 +66,7 @@ export default function Dashboard(props) {
     return activeRoute;
   };
   // This changes navbar state(fixed or not)
-  const getActiveNavbar = (routes) => {
+  const getActiveNavbar = (routes:any):any => {
     let activeNavbar = false;
     for (let i = 0; i < routes.length; i++) {
       if (routes[i].category) {
@@ -81,27 +86,27 @@ export default function Dashboard(props) {
     }
     return activeNavbar;
   };
-  const getRoutes = (routes) => {
-    return routes.map((prop, key) => {
-      if (prop.collapse) {
-        return getRoutes(prop.views);
-      }
-      if (prop.category === "account") {
-        return getRoutes(prop.views);
-      }
-      if (prop.layout === "/rtl" || prop.layout === "/admin") {
-        return (
-          <Route
-            path={prop.layout + prop.path}
-            component={prop.component}
-            key={key}
-          />
-        );
-      } else {
-        return null;
-      }
-    });
-  };
+  // const getRoutes = (routes) => {
+  //   return routes.map((prop, key) => {
+  //     if (prop.collapse) {
+  //       return getRoutes(prop.views);
+  //     }
+  //     if (prop.category === "account") {
+  //       return getRoutes(prop.views);
+  //     }
+  //     if (prop.layout === "/rtl" || prop.layout === "/admin") {
+  //       return (
+  //         <Route
+  //           path={prop.layout + prop.path}
+  //           component={prop.component}
+  //           key={key}
+  //         />
+  //       );
+  //     } else {
+  //       return null;
+  //     }
+  //   });
+  // };
   const { colorMode } = useColorMode();
   const { isOpen, onOpen, onClose } = useDisclosure();
   document.documentElement.dir = "rtl";
@@ -140,7 +145,7 @@ export default function Dashboard(props) {
         }
         display='none'
         sidebarVariant={sidebarVariant}
-        {...rest}
+        // {...rest}
       />
       <MainPanel
         variant='rtl'
@@ -156,16 +161,17 @@ export default function Dashboard(props) {
             brandText={getActiveRoute(routes)}
             secondary={getActiveNavbar(routes)}
             fixed={fixed}
-            {...rest}
+            // {...rest}
           />
         </Portal>
         {getRoute() ? (
           <PanelContent>
             <PanelContainer>
-              <Switch>
+              {/* <Switch>
                 {getRoutes(routes)}
                 <Redirect from='/rtl' to='/rtl/rtl-support-page' />
-              </Switch>
+              </Switch> */}
+              {children}
             </PanelContainer>
           </PanelContent>
         ) : null}

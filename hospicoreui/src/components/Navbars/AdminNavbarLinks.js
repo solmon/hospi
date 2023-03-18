@@ -21,7 +21,8 @@ import { ItemContent } from "../Menu/ItemContent";
 import { SearchBar } from "../Navbars/SearchBar/SearchBar";
 import { SidebarResponsive } from "../Sidebar/Sidebar";
 import React from "react";
-import { NavLink } from "react-router-dom";
+// import { NavLink } from "react-router-dom";
+import Link from 'next/link';
 import routes from "../../routes";
 
 export default function HeaderLinks(props) {
@@ -53,7 +54,7 @@ export default function HeaderLinks(props) {
       alignItems='center'
       flexDirection='row'>
       <SearchBar me='18px' />
-      <NavLink to='/auth/signin'>
+      <Link href='/auth/signin'>
         <Button
           ms='0px'
           px='0px'
@@ -61,14 +62,14 @@ export default function HeaderLinks(props) {
           color={navbarIcon}
           variant='no-effects'
           rightIcon={
-            document.documentElement.dir ? (
+            typeof document !== "undefined" && document.documentElement.dir ? (
               ""
             ) : (
               <ProfileIcon color={navbarIcon} w='22px' h='22px' me='0px' />
             )
           }
           leftIcon={
-            document.documentElement.dir ? (
+            typeof document !== "undefined" && document.documentElement.dir ? (
               <ProfileIcon color={navbarIcon} w='22px' h='22px' me='0px' />
             ) : (
               ""
@@ -76,7 +77,7 @@ export default function HeaderLinks(props) {
           }>
           <Text display={{ sm: "none", md: "flex" }}>Sign In</Text>
         </Button>
-      </NavLink>
+      </Link>
       <SidebarResponsive
         hamburgerColor={"white"}
         logo={

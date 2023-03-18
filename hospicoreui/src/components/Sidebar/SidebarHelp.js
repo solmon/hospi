@@ -44,7 +44,7 @@ export function SidebarHelp(props) {
           <Button
             variant={colorMode === "light" ? 'dark' : "navy"}
             minW='100%'
-            mb={window.innerWidth <= 1024 && "12px"}>
+            mb={typeof window!=="undefined" && window.innerWidth <= 1024 && "12px"}>
             UPGRADE TO PRO
           </Button>
         

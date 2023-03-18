@@ -6,8 +6,8 @@ import {
   Box,
   useColorMode,
 } from "@chakra-ui/react";
-import Configurator from "../components/Configurator/Configurator";
-import Footer from "../components/Footer/Footer.js";
+import Configurator from "@/components/Configurator/Configurator";
+import Footer from "@/components/Footer/Footer.js";
 import {
   ArgonLogoDark,
   ArgonLogoLight,
@@ -15,26 +15,26 @@ import {
   ChakraLogoLight,
 } from "../components/Icons/Icons";
 // Layout components
-import AdminNavbar from "../components/Navbars/AdminNavbar.js";
-import Sidebar from "../components/Sidebar/Sidebar.js";
-import React, { useState, createElement } from "react";
-import { Navigate, Route, Routes } from "react-router-dom";
-import routes from "../routes";
+import AdminNavbar from "@/components/Navbars/AdminNavbar.js";
+import Sidebar from "@/components/Sidebar/Sidebar.js";
+import React, { useState, createElement, useEffect } from "react";
+// import { Navigate, Route, Routes } from "react-router-dom";
+import routes from "@/routes";
 // Custom Chakra theme
-import FixedPlugin from "../components/FixedPlugin/FixedPlugin";
+import FixedPlugin from "@/components/FixedPlugin/FixedPlugin";
 // Custom components
-import MainPanel from "../components/Layout/MainPanel";
-import PanelContainer from "../components/Layout/PanelContainer";
-import PanelContent from "../components/Layout/PanelContent";
-import bgAdmin from "../assets/img/admin-background.png";
+import MainPanel from "@/components/Layout/MainPanel";
+import PanelContainer from "@/components/Layout/PanelContainer";
+import PanelContent from "@/components/Layout/PanelContent";
+import bgAdmin from "@/assets/img/admin-background.png";
 
 export default function AdminLayout({
   children,
-}:{
+}: {
   children: React.ReactNode;
-}) {
+}, props: any) {
 
-  // const { ...rest } = props;
+  const { ...rest } = props;
   // states and functions
   const [fixed, setFixed] = useState(false);
   const { colorMode } = useColorMode();
@@ -42,7 +42,7 @@ export default function AdminLayout({
   const getRoute = () => {
     return window.location.pathname !== "/admin/full-screen-maps";
   };
-  const getActiveRoute = (routes:any): any => {
+  const getActiveRoute = (routes: any): any => {
     let activeRoute = "Default Brand Text";
     for (let i = 0; i < routes.length; i++) {
       if (routes[i].collapse) {
@@ -56,7 +56,7 @@ export default function AdminLayout({
           return categoryActiveRoute;
         }
       } else {
-        if (
+        if (typeof window !== "undefined" &&
           window.location.href.indexOf(routes[i].layout + routes[i].path) !== -1
         ) {
           return routes[i].name;
@@ -66,7 +66,7 @@ export default function AdminLayout({
     return activeRoute;
   };
   // This changes navbar state(fixed or not)
-  const getActiveNavbar = (routes: any):any => {
+  const getActiveNavbar = (routes: any): any => {
     let activeNavbar = false;
     for (let i = 0; i < routes.length; i++) {
       if (routes[i].category) {
@@ -75,45 +75,25 @@ export default function AdminLayout({
           return categoryActiveNavbar;
         }
       } else {
-        if (
-          window.location.href.indexOf(routes[i].layout + routes[i].path) !== -1
-        ) {
-          if (routes[i].secondaryNavbar) {
-            return routes[i].secondaryNavbar;
+        if (typeof window !== "undefined") {
+          if (
+            window.location.href.indexOf(routes[i].layout + routes[i].path) !== -1
+          ) {
+            if (routes[i].secondaryNavbar) {
+              return routes[i].secondaryNavbar;
+            }
           }
         }
       }
     }
     return activeNavbar;
   };
-  // const getRoutes = (routes:any): any => {
-  //   return routes.map((prop:any, key:any) => {
-  //     // debugger;
-  //     if (prop.collapse) {
-  //       return getRoutes(prop.views);
-  //     }
-  //     if (prop.category === "account") {
-  //       return getRoutes(prop.views);
-  //     }
-  //     if (prop.layout === "/admin") {
-  //       console.log(prop.layout + prop.path);
-  //       return (
-  //         // <Route
-  //         //   path={prop.layout + prop.path}
-  //         //   // element={createElement(prop.component)}
-  //         //   element={<DashboardVW/>}
-  //         //   // component={prop.component}
-  //         //   key={prop.ikey}
-  //         // />
-  //         </>
-  //       );
-  //     } else {
-  //       return null;
-  //     }
-  //   });
-  //};
+
   const { isOpen, onOpen, onClose } = useDisclosure();
-  document.documentElement.dir = "ltr";
+
+  useEffect(() => {
+    document.documentElement.dir = "ltr";
+  });
   // Chakra Color Mode
   return (
     <Box>
@@ -148,7 +128,7 @@ export default function AdminLayout({
           </Stack>
         }
         display='none'
-        // {...rest}
+        {...rest}
       />
       <MainPanel
         w={{
@@ -161,22 +141,14 @@ export default function AdminLayout({
             brandText={getActiveRoute(routes)}
             secondary={getActiveNavbar(routes)}
             fixed={fixed}
-            // {...rest}
+            {...rest}
           />
         </Portal>
-        {getRoute() ? (
-          <PanelContent>
-            <PanelContainer>
-            
-              {/* <Routes>
-                {getRoutes(routes)}
-                <Route path={'/admin/'} element={<Navigate to="/admin/dashboard"/>} />
-              </Routes> */}
-              {children}
-            </PanelContainer>
-          </PanelContent>
-        ) : null}
-        <Box>Sample Sol</Box>
+        <PanelContent>
+          <PanelContainer>
+            {children}
+          </PanelContainer>
+        </PanelContent>
         <Footer />
         <Portal>
           <FixedPlugin

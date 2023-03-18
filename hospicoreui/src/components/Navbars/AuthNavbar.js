@@ -17,7 +17,8 @@ import {
 } from "../Icons/Icons";
 import { SidebarResponsive } from "../Sidebar/Sidebar";
 import React from "react";
-import { NavLink } from "react-router-dom";
+// import { NavLink } from "react-router-dom";
+import Link from "next/link"
 import routes from "../../routes";
 export default function AuthNavbar(props) {
   const { logo, logoText, secondary, ...rest } = props;
@@ -61,7 +62,7 @@ export default function AuthNavbar(props) {
   hamburgerColor = { base: "white" };
   var linksAuth = (
     <HStack display={{ sm: "none", lg: "flex" }}>
-      <NavLink to="/admin/dashboard">
+      <Link href="/admin/dashboard">
         <Button
           fontSize="sm"
           ms="0px"
@@ -74,7 +75,7 @@ export default function AuthNavbar(props) {
         >
           <Text>Dashboard</Text>
         </Button>
-      </NavLink>
+      </Link>
       <NavLink to="/admin/profile">
         <Button
           fontSize="sm"
@@ -91,7 +92,7 @@ export default function AuthNavbar(props) {
           <Text>Profile</Text>
         </Button>
       </NavLink>
-      <NavLink to="/auth/signup">
+      <Link href="/auth/signup">
         <Button
           fontSize="sm"
           ms="0px"
@@ -106,8 +107,8 @@ export default function AuthNavbar(props) {
         >
           <Text>Sign Up</Text>
         </Button>
-      </NavLink>
-      <NavLink to="/auth/signin">
+      </Link>
+      <Link href="/auth/signin">
         <Button
           fontSize="sm"
           ms="0px"
@@ -121,7 +122,7 @@ export default function AuthNavbar(props) {
         >
           <Text>Sign In</Text>
         </Button>
-      </NavLink>
+      </Link>
     </HStack>
   );
   return (
