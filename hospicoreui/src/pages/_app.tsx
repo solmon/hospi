@@ -5,8 +5,10 @@ import app from '@/lib/app';
 // import {useEffect, useState} from 'react';
 import { ChakraProvider } from '@chakra-ui/react'
 import theme from "@/theme/theme";
-import type {AppPropsWithLayout} from "@/types";
+import type { AppPropsWithLayout } from "@/types";
 import AdminLayout from '@/layouts/AdminLayout';
+import { SessionProvider } from 'next-auth/react';
+import { Toaster } from 'react-hot-toast';
 // import React from "react";
 // import ReactDOM from "react-dom";
 // import { HashRouter, Route, Routes, Navigate } from "react-router-dom";
@@ -15,16 +17,19 @@ import AdminLayout from '@/layouts/AdminLayout';
 // const Chart = dynamic(() =>import { HashRouter, Route, Routes, Navigate } from "react-router-dom", { ssr: false });
 
 export default function App({ Component, pageProps }: AppPropsWithLayout) {
-  
-  const {session, ...props} = pageProps;
-  const getLayout = Component.getLayout || ((page)=><AdminLayout>{page}</AdminLayout>);
+
+  const { session, ...props } = pageProps;
+  const getLayout = Component.getLayout || ((page) => <AdminLayout>{page}</AdminLayout>);
 
   // const [render, setRender] = useState(false);
   // useEffect(() => setRender(true), []);
   // return render ? (
   return (
     <ChakraProvider theme={theme} resetCSS={false}>
-      {getLayout(<Component {...props} />)}
+      <SessionProvider session={session}>
+        <Toaster />
+        {getLayout(<Component {...props} />)}
+      </SessionProvider>
       {/* <HashRouter>
         <Routes>
           <Route path={`/auth`} element={<AuthLayout />} />
@@ -34,6 +39,6 @@ export default function App({ Component, pageProps }: AppPropsWithLayout) {
         </Routes>
       </HashRouter> */}
     </ChakraProvider>
-    );  
+  );
   // ) : null;  
 }

@@ -37,12 +37,14 @@ export default function HeaderLinks(props) {
   } = props;
 
   const { colorMode } = useColorMode();
+  const mainGreyColor = useColorModeValue("gray.700", "gray.200");
+  const mainWhiteColor = useColorModeValue("white", "gray.200");
 
   // Chakra Color Mode
   let navbarIcon =
     fixed && scrolled
-      ? useColorModeValue("gray.700", "gray.200")
-      : useColorModeValue("white", "gray.200");
+      ? mainGreyColor
+      : mainWhiteColor;
   let menuBg = useColorModeValue("white", "navy.800");
   if (secondary) {
     navbarIcon = "white";

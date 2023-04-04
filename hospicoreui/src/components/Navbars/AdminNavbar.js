@@ -32,34 +32,39 @@ export default function AdminNavbar(props) {
     ...rest
   } = props;
 
+
+  const mainGreyColor = useColorModeValue("gray.700", "gray.200");
+  const mainWhiteColor = useColorModeValue("white", "gray.200");
+
   // Here are all the props that may change depending on navbar's type or state.(secondary, variant, scrolled)
-  let mainText = (fixed && scrolled) ? useColorModeValue("gray.700", "gray.200") : useColorModeValue("white", "gray.200");
-  let secondaryText = (fixed && scrolled) ? useColorModeValue("gray.700", "gray.200") : useColorModeValue("white", "gray.200");
+  let mainText = (fixed && scrolled) ? mainGreyColor : mainWhiteColor;
+  let secondaryText = (fixed && scrolled) ? mainGreyColor : mainWhiteColor;
   let navbarPosition = "absolute";
-  let navbarFilter = "none";
+  let navbarFilter = useColorModeValue(
+    "none",
+    "drop-shadow(0px 7px 23px rgba(0, 0, 0, 0.05))"
+  );
   let navbarBackdrop = "none";
-  let navbarShadow = "none";
-  let navbarBg = "none";
-  let navbarBorder = "transparent";
+  let navbarShadow = useColorModeValue(
+    "0px 7px 23px rgba(0, 0, 0, 0.05)",
+    "none"
+  );;
+  let navbarBg = useColorModeValue(
+    "linear-gradient(112.83deg, rgba(255, 255, 255, 0.82) 0%, rgba(255, 255, 255, 0.8) 110.84%)",
+    "linear-gradient(112.83deg, rgba(255, 255, 255, 0.21) 0%, rgba(255, 255, 255, 0) 110.84%)"
+  );
+  let navbarBorder = useColorModeValue("#FFFFFF", "rgba(255, 255, 255, 0.31)");
   let secondaryMargin = "0px";
   let paddingX = "15px";
-  if (props.fixed === true)
-    if (scrolled === true) {
+  if (props.fixed === false || scrolled === false){
+    // if (scrolled === true) {
       navbarPosition = "fixed";
-      navbarShadow = useColorModeValue(
-        "0px 7px 23px rgba(0, 0, 0, 0.05)",
-        "none"
-      );
-      navbarBg = useColorModeValue(
-        "linear-gradient(112.83deg, rgba(255, 255, 255, 0.82) 0%, rgba(255, 255, 255, 0.8) 110.84%)",
-        "linear-gradient(112.83deg, rgba(255, 255, 255, 0.21) 0%, rgba(255, 255, 255, 0) 110.84%)"
-      );
-      navbarBorder = useColorModeValue("#FFFFFF", "rgba(255, 255, 255, 0.31)");
-      navbarFilter = useColorModeValue(
-        "none",
-        "drop-shadow(0px 7px 23px rgba(0, 0, 0, 0.05))"
-      );
-    }
+      navbarShadow = "none";
+      navbarBg = "none";
+      navbarBorder = "transparent";
+      navbarFilter = "none";
+    // }
+  }
   if (props.secondary) {
     navbarBackdrop = "none";
     navbarPosition = "absolute";
