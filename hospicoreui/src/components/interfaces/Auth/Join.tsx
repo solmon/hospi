@@ -85,10 +85,9 @@ const Join = () => {
       <Box className="mt-3 space-y-3">
         <Button
           type="submit"
-          color="primary"
-          loading={formik.isSubmitting}
-          active={formik.dirty}
-          fullWidth
+          variant='primary'
+          isLoading={formik.isSubmitting}
+          isActive={formik.dirty}          
         >
           {t('create-account')}
         </Button>

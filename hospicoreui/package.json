@@ -60,7 +60,10 @@
     "typescript": "4.9.5",
     "uuid": "^9.0.0",
     "yup": "^1.0.2",
-    "svix":"0.82.1"
+    "svix":"0.82.1",
+    "bcryptjs":"2.4.3",
+    "@boxyhq/saml-jackson":"1.9.5",
+    "nodemailer":"6.9.1"
   },
   "devDependencies": {
     "gulp": "^4.0.2",

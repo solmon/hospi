@@ -21,7 +21,8 @@
       "@/components/*": ["src/components/*"],
       "@/hooks/*": ["src/hooks/*"],
       "@/locales/*":["src/locales/*"],
-      "@/types/*":["src/types/*"]
+      "@/types/*":["src/types/*"],
+      "@/models/*":["src/models/*"]
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "next-auth.d.ts"],

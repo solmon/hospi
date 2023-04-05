@@ -1,5 +1,11 @@
-// import { Input } from 'react-daisyui';
-import {Input,Box,FormControl,FormLabel} from '@chakra-ui/react'
+import {
+  Input,
+  Box,
+  FormControl,
+  FormLabel,
+  FormErrorMessage,
+  FormHelperText
+} from '@chakra-ui/react'
 
 const InputWithLabel = ({
   label,
@@ -10,40 +16,27 @@ const InputWithLabel = ({
   ...props
 }: InputProps) => {
   const classes = Array<string>();
-
+  let isError:boolean=false;
   if (error) {
-    classes.push('input-error');
+    isError=true;
   }
 
   return (
     <FormControl>
-          <FormLabel htmlFor={name}>{label}</FormLabel>
-          <Input
-           {...props}
-            variant="filled"
-            type={type} 
-          />
-          {(error || descriptionText) && (
-            <label className="label">
-              <span className={`label-text-alt ${error ? 'text-red-500' : ''}`}>
-                {error || descriptionText}
-              </span>
-            </label>
-          )}
-    </FormControl>
-    // <div className="form-control w-full">
-    //   <label className="label">
-    //     <span className="label-text">{label}</span>
-    //   </label>
-    //   <Input className={classes.join(' ')} {...props} type={type} />
-    //   {(error || descriptionText) && (
-    //     <label className="label">
-    //       <span className={`label-text-alt ${error ? 'text-red-500' : ''}`}>
-    //         {error || descriptionText}
-    //       </span>
-    //     </label>
-    //   )}
-    // </div>
+      <FormLabel htmlFor={name}>{label}</FormLabel>
+      <Input
+        id={name}
+        {...props}
+        type={type}                
+      />
+      {!isError ? (
+        <FormHelperText>
+          {descriptionText}
+        </FormHelperText>
+      ) : (
+        <FormErrorMessage>{error}</FormErrorMessage>
+      )}
+    </FormControl>    
   );
 };
 
