@@ -2,14 +2,14 @@ import { Error, Loading } from '@/components/ui';
 import type { Team } from '@prisma/client';
 import axios from 'axios';
 import type { FormikHelpers } from 'formik';
-import useWebhook from 'hooks/useWebhook';
-import useWebhooks from 'hooks/useWebhooks';
+import useWebhook from '@/hooks/useWebhook';
+import useWebhooks from '@/hooks/useWebhooks';
 import { useTranslation } from 'next-i18next';
 import React from 'react';
 import toast from 'react-hot-toast';
 import type { EndpointOut } from 'svix';
-import type { WebookFormSchema } from 'types';
-import type { ApiResponse } from 'types';
+import type { WebookFormSchema } from '../../../types';
+import type { ApiResponse } from '../../../types';
 
 import ModalForm from './Form';
 

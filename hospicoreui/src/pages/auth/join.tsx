@@ -1,10 +1,10 @@
-import GithubButton from '@/components/interfaces/Auth/GithubButton';
-import GoogleButton from '@/components/interfaces/Auth/GoogleButton';
-import Join from '@/components/interfaces/Auth/Join';
-import JoinWithInvitation from '@/components/interfaces/Auth/JoinWithInvitation';
-import { AuthLayout } from '@/components/layouts';
-import { getParsedCookie } from '@/lib/cookie';
-import { inferSSRProps } from '@/lib/inferSSRProps';
+import GithubButton from '../../components/interfaces/Auth/GithubButton';
+import GoogleButton from '../../components/interfaces/Auth/GoogleButton';
+import Join from '../../components/interfaces/Auth/Join';
+import JoinWithInvitation from '../../components/interfaces/Auth/JoinWithInvitation';
+import { AuthLayout } from '../../components/layouts';
+import { getParsedCookie } from '../../lib/cookie';
+import { inferSSRProps } from '../../lib/inferSSRProps';
 import { GetServerSidePropsContext } from 'next';
 import { useSession } from 'next-auth/react';
 import { useTranslation } from 'next-i18next';
@@ -12,7 +12,8 @@ import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import type { ReactElement } from 'react';
-import type { NextPageWithLayout } from 'types';
+import type { NextPageWithLayout } from '../../types';
+import { Box } from '@chakra-ui/react';
 
 const Signup: NextPageWithLayout<inferSSRProps<typeof getServerSideProps>> = ({
   inviteToken,
@@ -28,25 +29,25 @@ const Signup: NextPageWithLayout<inferSSRProps<typeof getServerSideProps>> = ({
 
   return (
     <>
-      <div className="rounded-md bg-white p-6 shadow-sm">
+      <Box className="rounded-md bg-white p-6 shadow-sm">
         {inviteToken ? (
           <JoinWithInvitation inviteToken={inviteToken} next={next} />
         ) : (
           <Join />
         )}
-        <div className="divider">or</div>
-        <div className="space-y-3">
+        <Box className="divider">or</Box>
+        <Box className="space-y-3">
           <GithubButton />
           <GoogleButton />
-        </div>
-      </div>
+        </Box>
+      </Box>
 
       <p className="text-center text-sm text-gray-600">
         {t('already-have-an-account')}
         <Link href="/auth/login">
-          <a className="font-medium text-indigo-600 hover:text-indigo-500">
+          {/* <a className="font-medium text-indigo-600 hover:text-indigo-500"> */}
             &nbsp;{t('sign-in')}
-          </a>
+          {/* </a> */}
         </Link>
       </p>
     </>

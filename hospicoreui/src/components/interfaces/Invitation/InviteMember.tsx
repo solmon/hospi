@@ -3,12 +3,13 @@ import { availableRoles } from '@/lib/roles';
 import type { Invitation, Team } from '@prisma/client';
 import axios from 'axios';
 import { useFormik } from 'formik';
-import useInvitations from 'hooks/useInvitations';
+import useInvitations from '@/hooks/useInvitations';
 import { useTranslation } from 'next-i18next';
 import React from 'react';
-import { Button, Input, Modal } from 'react-daisyui';
+// import { Button, Input, Modal } from 'react-daisyui';
+import { Button, Input, Modal } from '@chakra-ui/react';
 import toast from 'react-hot-toast';
-import type { ApiResponse } from 'types';
+import type { ApiResponse } from '../../../types';
 import * as Yup from 'yup';
 
 const InviteMember = ({

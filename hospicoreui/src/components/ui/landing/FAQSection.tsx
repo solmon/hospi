@@ -1,6 +1,7 @@
-import faqs from 'data/faq.json';
+import faqs from '../../../data/faq.json';
 import { useTranslation } from 'next-i18next';
-import { Card } from 'react-daisyui';
+// import { Card } from 'react-daisyui';
+import { Card } from '@/components/Card/Card';
 
 const FAQSection = () => {
   const { t } = useTranslation('common');

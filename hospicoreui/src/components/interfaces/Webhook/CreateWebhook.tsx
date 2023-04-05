@@ -1,12 +1,12 @@
 import type { Team } from '@prisma/client';
 import axios from 'axios';
 import type { FormikHelpers } from 'formik';
-import useWebhooks from 'hooks/useWebhooks';
+import useWebhooks from '@/hooks/useWebhooks';
 import { useTranslation } from 'next-i18next';
 import React from 'react';
 import toast from 'react-hot-toast';
-import type { ApiResponse } from 'types';
-import type { WebookFormSchema } from 'types';
+import type { ApiResponse } from '../../../types';
+import type { WebookFormSchema } from '../../../types';
 
 import ModalForm from './Form';
 

@@ -1,12 +1,13 @@
 import { Card, Error, LetterAvatar, Loading } from '@/components/ui';
 import { Invitation, Team } from '@prisma/client';
 import axios from 'axios';
-import useInvitations from 'hooks/useInvitations';
+import useInvitations from '@/hooks/useInvitations';
 import { useTranslation } from 'next-i18next';
 import React from 'react';
-import { Button } from 'react-daisyui';
+// import { Button } from 'react-daisyui';
+import { Button } from '@chakra-ui/react';
 import toast from 'react-hot-toast';
-import { ApiResponse } from 'types';
+import { ApiResponse } from '../../../types';
 
 const PendingInvitations = ({ team }: { team: Team }) => {
   const { isLoading, isError, invitations, mutateInvitation } = useInvitations(

@@ -1,10 +1,13 @@
 import { signIn } from 'next-auth/react';
-import { Button } from 'react-daisyui';
+// import { Button } from 'react-daisyui';
+import {Button} from "@chakra-ui/react";
 
 const GithubButton = () => {
   return (
     <Button
-      className="btn-outline w-full"
+      boxSize="initial"
+      justifyContent="flex-start"
+      alignItems="center"
       onClick={() => {
         signIn('github', {
           callbackUrl: '/dashboard',

@@ -2,12 +2,13 @@ import { Card, Error, LetterAvatar, Loading } from '@/components/ui';
 import { getAxiosError } from '@/lib/common';
 import { Team } from '@prisma/client';
 import axios from 'axios';
-import useTeams from 'hooks/useTeams';
+import useTeams from '@/hooks/useTeams';
 import { useTranslation } from 'next-i18next';
 import Link from 'next/link';
-import { Button } from 'react-daisyui';
+// import { Button } from 'react-daisyui';
+import { Button } from '@chakra-ui/react';
 import toast from 'react-hot-toast';
-import { ApiResponse } from 'types';
+import { ApiResponse } from '../../../types';
 
 const Teams = () => {
   const { isLoading, isError, teams, mutateTeams } = useTeams();

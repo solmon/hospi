@@ -1,10 +1,11 @@
 import { Card, Error, Loading } from '@/components/ui';
 import { Team } from '@prisma/client';
 import axios from 'axios';
-import useWebhooks from 'hooks/useWebhooks';
+import useWebhooks from '@/hooks/useWebhooks';
 import { useTranslation } from 'next-i18next';
 import React from 'react';
-import { Button } from 'react-daisyui';
+// import { Button } from 'react-daisyui';
+import { Button } from '@chakra-ui/react';
 import toast from 'react-hot-toast';
 import type { EndpointOut } from 'svix';
 

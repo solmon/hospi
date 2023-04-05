@@ -1,4 +1,4 @@
-import features from 'data/features.json';
+import features from '../../../data/features.json';
 import { useTranslation } from 'next-i18next';
 
 const FeatureSection = () => {

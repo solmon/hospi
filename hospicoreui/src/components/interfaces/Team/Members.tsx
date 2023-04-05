@@ -3,10 +3,11 @@ import { availableRoles } from '@/lib/roles';
 import { isTeamAdmin } from '@/lib/teams';
 import { Team, TeamMember } from '@prisma/client';
 import axios from 'axios';
-import useTeamMembers from 'hooks/useTeamMembers';
+import useTeamMembers from '@/hooks/useTeamMembers';
 import { useSession } from 'next-auth/react';
 import { useTranslation } from 'next-i18next';
-import { Button } from 'react-daisyui';
+// import { Button } from 'react-daisyui';
+import { Button } from '@chakra-ui/react';
 import toast from 'react-hot-toast';
 
 const Members = ({ team }: { team: Team }) => {

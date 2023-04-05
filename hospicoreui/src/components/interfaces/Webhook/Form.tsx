@@ -3,8 +3,9 @@ import type { FormikConfig } from 'formik';
 import { useFormik } from 'formik';
 import { useTranslation } from 'next-i18next';
 import React from 'react';
-import { Button, Modal } from 'react-daisyui';
-import type { WebookFormSchema } from 'types';
+// import { Button, Modal } from 'react-daisyui';
+import { Button, Modal } from '@chakra-ui/react';
+import type { WebookFormSchema } from '../../../types';
 import * as Yup from 'yup';
 
 import EventTypes from './EventTypes';

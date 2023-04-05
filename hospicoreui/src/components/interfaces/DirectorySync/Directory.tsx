@@ -1,6 +1,6 @@
 import { Error, Loading } from '@/components/ui';
 import { Team } from '@prisma/client';
-import useDirectory from 'hooks/useDirectory';
+import useDirectory from '@/hooks/useDirectory';
 import { useTranslation } from 'next-i18next';
 
 const Directory = ({ team }: { team: Team }) => {

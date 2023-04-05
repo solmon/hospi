@@ -1,7 +1,8 @@
 import { CheckIcon } from '@heroicons/react/20/solid';
-import plans from 'data/pricing.json';
+import plans from '../../../data/pricing.json';
 import { useTranslation } from 'next-i18next';
-import { Button, Card } from 'react-daisyui';
+import { Button } from '@chakra-ui/react';
+import {Card} from '@/components/Card/Card';
 
 const PricingSection = () => {
   const { t } = useTranslation('common');

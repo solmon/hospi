@@ -4,7 +4,8 @@ import axios from 'axios';
 import { useTranslation } from 'next-i18next';
 import { useRouter } from 'next/router';
 import React from 'react';
-import { Button } from 'react-daisyui';
+// import { Button } from 'react-daisyui';
+import { Button } from '@chakra-ui/react';
 import toast from 'react-hot-toast';
 
 const RemoveTeam = ({ team }: { team: Team }) => {

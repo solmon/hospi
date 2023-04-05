@@ -5,9 +5,9 @@ import axios from 'axios';
 import { useFormik } from 'formik';
 import { useTranslation } from 'next-i18next';
 import { useRouter } from 'next/router';
-import { Button } from 'react-daisyui';
+import { VStack, Box, Button, FormControl, Input, FormLabel } from '@chakra-ui/react';
 import toast from 'react-hot-toast';
-import type { ApiResponse } from 'types';
+import type { ApiResponse } from '../../../types';
 import * as Yup from 'yup';
 
 const Join = () => {
@@ -44,12 +44,12 @@ const Join = () => {
 
   return (
     <form onSubmit={formik.handleSubmit}>
-      <div className="space-y-1">
+      <VStack spacing={4} align="flex-start">
         <InputWithLabel
           type="text"
           label="Name"
           name="name"
-          placeholder="Your name"
+          placeholder="User Name"
           value={formik.values.name}
           error={formik.touched.name ? formik.errors.name : undefined}
           onChange={formik.handleChange}
@@ -81,8 +81,8 @@ const Join = () => {
           error={formik.touched.password ? formik.errors.password : undefined}
           onChange={formik.handleChange}
         />
-      </div>
-      <div className="mt-3 space-y-3">
+      </VStack>
+      <Box className="mt-3 space-y-3">
         <Button
           type="submit"
           color="primary"
@@ -93,7 +93,7 @@ const Join = () => {
           {t('create-account')}
         </Button>
         <p className="text-sm">{t('sign-up-message')}</p>
-      </div>
+      </Box>
     </form>
   );
 };

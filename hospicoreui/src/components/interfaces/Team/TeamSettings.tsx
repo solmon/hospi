@@ -5,9 +5,10 @@ import axios from 'axios';
 import { useFormik } from 'formik';
 import { useRouter } from 'next/router';
 import React from 'react';
-import { Button } from 'react-daisyui';
+// import { Button } from 'react-daisyui';
+import { Button } from '@chakra-ui/react';
 import toast from 'react-hot-toast';
-import type { ApiResponse } from 'types';
+import type { ApiResponse } from '../../../types';
 import * as Yup from 'yup';
 
 const TeamSettings = ({ team }: { team: Team }) => {

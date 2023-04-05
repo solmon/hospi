@@ -4,9 +4,10 @@ import { User } from '@prisma/client';
 import axios from 'axios';
 import { useFormik } from 'formik';
 import { useTranslation } from 'next-i18next';
-import { Button } from 'react-daisyui';
+// import { Button } from 'react-daisyui';
+import {Button} from '@chakra-ui/react';
 import toast from 'react-hot-toast';
-import type { ApiResponse } from 'types';
+import type { ApiResponse } from '../../../types';
 import * as Yup from 'yup';
 
 const schema = Yup.object().shape({

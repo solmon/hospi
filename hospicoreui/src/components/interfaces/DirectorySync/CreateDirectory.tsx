@@ -4,12 +4,13 @@ import type { Directory } from '@boxyhq/saml-jackson';
 import { Team } from '@prisma/client';
 import axios from 'axios';
 import { useFormik } from 'formik';
-import useDirectory from 'hooks/useDirectory';
+import useDirectory from '@/hooks/useDirectory';
 import { useTranslation } from 'next-i18next';
-import { Button, Modal } from 'react-daisyui';
+// import { Button, Modal } from 'react-daisyui';
+import {Button,Modal} from '@chakra-ui/react';
 import toast from 'react-hot-toast';
 import useSWR from 'swr';
-import type { ApiResponse } from 'types';
+import type { ApiResponse } from '../../../types';
 import * as Yup from 'yup';
 
 const CreateDirectory = ({

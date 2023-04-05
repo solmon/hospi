@@ -1,7 +1,9 @@
-import { Input } from 'react-daisyui';
+// import { Input } from 'react-daisyui';
+import {Input,Box,FormControl,FormLabel} from '@chakra-ui/react'
 
 const InputWithLabel = ({
   label,
+  name,
   type = 'text',
   error,
   descriptionText,
@@ -14,19 +16,34 @@ const InputWithLabel = ({
   }
 
   return (
-    <div className="form-control w-full">
-      <label className="label">
-        <span className="label-text">{label}</span>
-      </label>
-      <Input className={classes.join(' ')} {...props} type={type} />
-      {(error || descriptionText) && (
-        <label className="label">
-          <span className={`label-text-alt ${error ? 'text-red-500' : ''}`}>
-            {error || descriptionText}
-          </span>
-        </label>
-      )}
-    </div>
+    <FormControl>
+          <FormLabel htmlFor={name}>{label}</FormLabel>
+          <Input
+           {...props}
+            variant="filled"
+            type={type} 
+          />
+          {(error || descriptionText) && (
+            <label className="label">
+              <span className={`label-text-alt ${error ? 'text-red-500' : ''}`}>
+                {error || descriptionText}
+              </span>
+            </label>
+          )}
+    </FormControl>
+    // <div className="form-control w-full">
+    //   <label className="label">
+    //     <span className="label-text">{label}</span>
+    //   </label>
+    //   <Input className={classes.join(' ')} {...props} type={type} />
+    //   {(error || descriptionText) && (
+    //     <label className="label">
+    //       <span className={`label-text-alt ${error ? 'text-red-500' : ''}`}>
+    //         {error || descriptionText}
+    //       </span>
+    //     </label>
+    //   )}
+    // </div>
   );
 };
 
