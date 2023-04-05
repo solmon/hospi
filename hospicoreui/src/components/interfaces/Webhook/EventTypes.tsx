@@ -1,5 +1,5 @@
 import React, { ReactElement } from 'react';
-import type { WebookFormSchema } from 'types';
+import type { WebookFormSchema } from '../../../types';
 
 export const eventTypes = [
   'member.created',
