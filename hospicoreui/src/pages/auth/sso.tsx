@@ -10,9 +10,9 @@ import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { type ReactElement, useEffect } from 'react';
-import { Button } from 'react-daisyui';
+import { Button } from '@chakra-ui/react';
 import toast from 'react-hot-toast';
-import type { ApiResponse, NextPageWithLayout } from 'types';
+import type { ApiResponse, NextPageWithLayout } from '../../types';
 import * as Yup from 'yup';
 
 const SSO: NextPageWithLayout = () => {

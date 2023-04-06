@@ -10,6 +10,16 @@ const nextConfig = {
     domains: [],
   },
   i18n,
+  experimental: {
+    swcPlugins: [
+      [
+        'next-superjson-plugin',
+        {
+          excluded: [],
+        },
+      ]
+    ]
+  }
 };
 
 module.exports = nextConfig;

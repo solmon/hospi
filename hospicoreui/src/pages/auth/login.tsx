@@ -15,9 +15,9 @@ import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import type { ReactElement } from 'react';
-import { Button } from 'react-daisyui';
+import { Button } from '@chakra-ui/react';
 import toast from 'react-hot-toast';
-import type { NextPageWithLayout } from '@/types';
+import type { NextPageWithLayout } from '../../types';
 import * as Yup from 'yup';
 
 const Login: NextPageWithLayout<
@@ -101,14 +101,10 @@ const Login: NextPageWithLayout<
         <div className="divider"></div>
         <div className="space-y-3">
           <Link href="/auth/magic-link">
-            <a className="btn-outline btn w-full">
-              &nbsp;{t('sign-in-with-email')}
-            </a>
+            &nbsp;{t('sign-in-with-email')}
           </Link>
           <Link href="/auth/sso">
-            <a className="btn-outline btn w-full">
-              &nbsp;{t('continue-with-saml-sso')}
-            </a>
+            &nbsp;{t('continue-with-saml-sso')}            
           </Link>
           <div className="divider">or</div>
           <GithubButton />
@@ -118,9 +114,7 @@ const Login: NextPageWithLayout<
       <p className="text-center text-sm text-gray-600">
         {t('dont-have-an-account')}
         <Link href="/auth/join">
-          <a className="font-medium text-indigo-600 hover:text-indigo-500">
-            &nbsp;{t('create-a-free-account')}
-          </a>
+          &nbsp;{t('create-a-free-account')}          
         </Link>
       </p>
     </>
