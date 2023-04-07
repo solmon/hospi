@@ -14,6 +14,7 @@ import { useRouter } from 'next/router';
 import type { ReactElement } from 'react';
 import type { NextPageWithLayout } from '../../types';
 import { Box } from '@chakra-ui/react';
+import SignUp from '@/views/Pages/SignUp.js';
 
 const Signup: NextPageWithLayout<inferSSRProps<typeof getServerSideProps>> = ({
   inviteToken,
@@ -33,7 +34,7 @@ const Signup: NextPageWithLayout<inferSSRProps<typeof getServerSideProps>> = ({
         {inviteToken ? (
           <JoinWithInvitation inviteToken={inviteToken} next={next} />
         ) : (
-          <Join />
+          <SignUp />          
         )}
         <Box className="divider">or</Box>
         <Box className="space-y-3">
@@ -45,9 +46,7 @@ const Signup: NextPageWithLayout<inferSSRProps<typeof getServerSideProps>> = ({
       <p className="text-center text-sm text-gray-600">
         {t('already-have-an-account')}
         <Link href="/auth/login">
-          {/* <a className="font-medium text-indigo-600 hover:text-indigo-500"> */}
-            &nbsp;{t('sign-in')}
-          {/* </a> */}
+            &nbsp;{t('sign-in')}          
         </Link>
       </p>
     </>

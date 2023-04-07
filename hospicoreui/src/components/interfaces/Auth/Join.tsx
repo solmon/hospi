@@ -5,7 +5,7 @@ import axios from 'axios';
 import { useFormik } from 'formik';
 import { useTranslation } from 'next-i18next';
 import { useRouter } from 'next/router';
-import { VStack, Box, Button, FormControl, Input, FormLabel } from '@chakra-ui/react';
+import { VStack, Box, Button } from '@chakra-ui/react';
 import toast from 'react-hot-toast';
 import type { ApiResponse } from '../../../types';
 import * as Yup from 'yup';
@@ -67,7 +67,7 @@ const Join = () => {
           type="email"
           label="Email"
           name="email"
-          placeholder="jackson@boxyhq.com"
+          placeholder="johnsmith@hospi.com"
           value={formik.values.email}
           error={formik.touched.email ? formik.errors.email : undefined}
           onChange={formik.handleChange}
@@ -85,7 +85,7 @@ const Join = () => {
       <Box className="mt-3 space-y-3">
         <Button
           type="submit"
-          variant='primary'
+          variant='navy'
           isLoading={formik.isSubmitting}
           isActive={formik.dirty}          
         >

@@ -238,6 +238,6 @@ function SignUp() {
       </Flex>
     </Flex>
   );
-}
+};
 
 export default SignUp;
