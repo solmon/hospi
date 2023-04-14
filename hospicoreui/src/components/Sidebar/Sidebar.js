@@ -28,7 +28,7 @@ import {
 import { HSeparator } from "../Separator/Separator";
 import { SidebarHelp } from "../Sidebar/SidebarHelp";
 import React from "react";
-import { Scrollbars } from "react-custom-scrollbars";
+// import { Scrollbars } from "react-custom-scrollbars";
 // import { NavLink, useLocation } from "react-router-dom";
 import {useRouter} from 'next/router';
 import Link from 'next/link';
@@ -239,7 +239,7 @@ function Sidebar(props) {
           filter="drop-shadow(0px 5px 14px rgba(0, 0, 0, 0.05))"
           borderRadius={sidebarRadius}
         >
-          <Scrollbars
+          {/* <Scrollbars
             autoHide
             renderTrackVertical={
               typeof document !== "undefined" && document.documentElement.dir === "rtl"
@@ -255,13 +255,13 @@ function Sidebar(props) {
                 ? renderViewRTL
                 : renderView
             }
-          >
+          > */}
             <Box>{brand}</Box>
             <Stack direction="column" mb="40px">
               <Box>{links}</Box>
             </Stack>
             <SidebarHelp sidebarVariant={sidebarVariant} />
-          </Scrollbars>
+          {/* </Scrollbars> */}
         </Box>
       </Box>
     </Box>

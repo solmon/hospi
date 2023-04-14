@@ -5,7 +5,8 @@ import { ChakraProvider } from '@chakra-ui/react'
 import theme from "../theme/theme";
 import type { AppPropsWithLayout } from "../types";
 import { appWithTranslation } from 'next-i18next';
-import AdminLayout from '../layouts/AdminLayout';
+// import AdminLayout from '../layouts/AdminLayout';
+import SideLayout from '../layouts/SideLayout';
 import { SessionProvider } from 'next-auth/react';
 import { Toaster } from 'react-hot-toast';
 
@@ -15,7 +16,7 @@ import { Toaster } from 'react-hot-toast';
 function MyApp({ Component, pageProps }: AppPropsWithLayout) {
 
   const { session, ...props } = pageProps;
-  const getLayout = Component.getLayout || ((page) => <AdminLayout>{page}</AdminLayout>);
+  const getLayout = Component.getLayout || ((page) => <SideLayout>{page}</SideLayout>);
 
   return (
     <ChakraProvider theme={theme} resetCSS={false}>
