@@ -1,1 +1,50 @@
-{}
+{
+    "name": "hospi-root",
+    "version": "0.0.0",
+    "private": true,
+    "scripts": {
+        "w": "yarn workspace",
+        "build-hospiui": "cd apps/hospiui && yarn build",
+        "run-hospiui": "cd apps/hospiui && yarn dev",
+        "clean": "turbo run clean",
+        "lint": "turbo run lint",
+        "build:tokens": "chakra-cli tokens packages/hp-ui-theme/src/hp-ui",
+        "build:packages": "turbo run build --filter='./packages/hp-ui-*' --concurrency=5 --no-deps --continue && yarn build:tokens"
+    },
+    "workspaces": [
+        "apps/*",
+        "packages/hp-ui-*",
+        "recipes/*"
+    ],
+    "packageManager": "yarn@3.5.1",
+    "devDependencies": {
+        "@chakra-ui/cli": "^2.4.1",
+        "@types/node": "^20.2.5",
+        "@typescript-eslint/eslint-plugin": "^5.59.9",
+        "@typescript-eslint/parser": "^5.59.9",
+        "browserslist": "^4.21.7",
+        "eslint": "^8.42.0",
+        "eslint-config-prettier": "^8.8.0",
+        "eslint-import-resolver-typescript": "^3.5.5",
+        "eslint-plugin-import": "^2.27.5",
+        "lodash": "^4.17.21",
+        "prettier": "^2.8.8",
+        "rimraf": "^5.0.1",
+        "tsup": "^6.7.0",
+        "turbo": "^1.10.2",
+        "typescript": "^5.0.4"
+    },
+    "dependencies": {
+        "@chakra-ui/react": "1.x",
+        "@emotion/react": "11.x",
+        "@emotion/styled": "11.x",
+        "cross-spawn": "^7.0.3",
+        "framer-motion": "^10.12.16",
+        "yup": "^1.2.0",
+        "zod": "^3.21.4"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/solmon/hospi"
+    }
+}

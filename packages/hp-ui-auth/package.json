@@ -1,0 +1,38 @@
+{
+  "name": "@hp-ui/auth",
+  "version": "1.0.0",
+  "description": "Core Authentication components for Hospi",
+  "source": "src/index.ts",
+  "exports": {
+    ".": {},
+    "./src": {
+      "default": "./src/index.ts"
+    }
+  },
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "scripts": {
+    "clean": "rimraf --no-glob ./dist",
+    "build": "tsup src/index.ts --config tsup.config.ts",
+    "lint": "eslint src --ext .ts,.tsx,.js,.jsx --config ../../.eslintrc.js",
+    "typecheck": "tsc --noEmit"
+  },
+  "files": [
+    "dist",
+    "src",
+    "services"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/solmon/hospi",
+    "directory": "packages/hp-ui-auth"
+  },
+  "dependencies": {
+    "@chakra-ui/utils": "^2.0.15",
+    "@saas-ui/core": "^2.0.0-next.0",
+    "@saas-ui/forms": "^1.5.5",
+    "@saas-ui/hooks": "^1.2.2"
+  },
+  "packageManager": "yarn@3.5.1"
+}
