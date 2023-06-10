@@ -4,16 +4,16 @@
   "private": true,
   "description": "Testing utilities for Chakra UI's components",
   "author": "Solsy <solmon@gmail.com>",
-    "license": "MIT",
-    "homepage": "https://hospi.org/",
-    "repository": {
-        "type": "git",
-        "url": "https://github.com/solmon/hospi",
-        "directory": "tooling/test-utils"
-    },
-    "keywords": [
-        "hospi"
-    ],
+  "license": "MIT",
+  "homepage": "https://hospi.org/",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/solmon/hospi",
+    "directory": "tooling/test-utils"
+  },
+  "keywords": [
+    "hospi"
+  ],
   "main": "src/index.ts",
   "dependencies": {
     "@emotion/jest": "^11.11.0",

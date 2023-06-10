@@ -44,7 +44,7 @@
     "hospi"
   ],
   "dependencies": {
-    "@hp-ui/auth": "^2.0.0-rc.24"
+    "@hp-ui/auth": "workspace:*"
   },
   "peerDependencies": {
     "@chakra-ui/react": ">=2.4.9",
