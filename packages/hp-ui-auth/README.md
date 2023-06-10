@@ -24,4 +24,4 @@ $ npm i @hp-ui/auth  --save
 
 ## License
 
-MIT - Appulse Software
+MIT 

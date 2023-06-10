@@ -31,7 +31,7 @@ export const FormLegend = (props: FormLabelProps) => {
 /**
  * The object field component.
  *
- * @see Docs https://saas-ui.dev/docs/components/forms/object-field
+ * @see Docs https://hp-ui.dev/docs/components/forms/object-field
  */
 export const ObjectField: React.FC<ObjectFieldProps> = (props) => {
   const {

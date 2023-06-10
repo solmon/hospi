@@ -83,7 +83,7 @@ export interface BannerProps
  * Banner is used to communicate the state or status of a
  * page, feature or action
  *
- * @see Docs https://saas-ui.dev/docs/components/feedback/banner
+ * @see Docs https://hp-ui.dev/docs/components/feedback/banner
  */
 export const Banner = forwardRef<BannerProps, 'div'>((props, ref) => {
   const {
@@ -150,7 +150,7 @@ export interface BannerContentProps extends HTMLChakraProps<'div'> {}
 /**
  * The wrapper for the banner title and description.
  *
- * @see Docs https://saas-ui.dev/docs/components/feedback/banner
+ * @see Docs https://hp-ui.dev/docs/components/feedback/banner
  */
 export const BannerContent = forwardRef<BannerContentProps, 'div'>(
   (props, ref) => {
@@ -176,7 +176,7 @@ export interface BannerTitleProps extends HTMLChakraProps<'div'> {}
 /**
  * The title of the banner to be announced by screen readers.
  *
- * @see Docs https://saas-ui.dev/docs/components/feedback/banner
+ * @see Docs https://hp-ui.dev/docs/components/feedback/banner
  */
 export const BannerTitle = forwardRef<BannerTitleProps, 'div'>((props, ref) => {
   const styles = useStyles()
@@ -198,7 +198,7 @@ export interface BannerDescriptionProps extends HTMLChakraProps<'div'> {}
 /**
  * The description of the banner to be announced by screen readers.
  *
- * @see Docs https://saas-ui.dev/docs/components/feedback/banner
+ * @see Docs https://hp-ui.dev/docs/components/feedback/banner
  */
 export const BannerDescription = forwardRef<BannerDescriptionProps, 'div'>(
   (props, ref) => {
@@ -228,7 +228,7 @@ export interface BannerActionsProps
 /**
  * The banner actions, renders a ButtonGroup.
  *
- * @see Docs https://saas-ui.dev/docs/components/feedback/banner
+ * @see Docs https://hp-ui.dev/docs/components/feedback/banner
  */
 export const BannerActions = forwardRef<BannerActionsProps, 'div'>(
   (props, ref) => {
@@ -257,7 +257,7 @@ export interface BannerIconProps extends HTMLChakraProps<'span'> {
 /**
  * The visual icon for the banner.
  *
- * @see Docs https://saas-ui.dev/docs/components/feedback/banner
+ * @see Docs https://hp-ui.dev/docs/components/feedback/banner
  */
 export const BannerIcon: React.FC<BannerIconProps> = (props) => {
   const { status } = useBannerContext()
@@ -282,7 +282,7 @@ BannerIcon.displayName = 'BannerIcon'
 /**
  * The close button.
  *
- * @see Docs https://saas-ui.dev/docs/components/feedback/banner
+ * @see Docs https://hp-ui.dev/docs/components/feedback/banner
  */
 export const BannerCloseButton = forwardRef<CloseButtonProps, 'button'>(
   (props, ref) => {

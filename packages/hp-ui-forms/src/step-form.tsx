@@ -69,7 +69,7 @@ export interface FormStepperProps extends StepsProps, ThemingProps<'Stepper'> {
 /**
  * Renders a stepper that displays progress above the form.
  *
- * @see Docs https://saas-ui.dev/docs/components/forms/step-form
+ * @see Docs https://hp-ui.dev/docs/components/forms/step-form
  */
 export const FormStepper: React.FC<FormStepperProps> = (props) => {
   const { activeIndex, setIndex } = useStepperContext()
@@ -133,7 +133,7 @@ export interface FormStepProps<TName extends string = string>
 /**
  * The form step containing fields for a specific step.
  *
- * @see Docs https://saas-ui.dev/docs/components/forms/step-form
+ * @see Docs https://hp-ui.dev/docs/components/forms/step-form
  */
 export const FormStep = <TName extends string = string>(
   props: FormStepProps<TName>
@@ -155,7 +155,7 @@ FormStep.displayName = 'FormStep'
 /**
  * A button that this opens the previous step when clicked. Disabled on the first step.
  *
- * @see Docs https://saas-ui.dev/docs/components/forms/step-form
+ * @see Docs https://hp-ui.dev/docs/components/forms/step-form
  */
 export const PrevButton: React.FC<ButtonProps> = (props) => {
   const { isFirstStep, isCompleted, prevStep } = useStepperContext()
@@ -181,7 +181,7 @@ export interface NextButtonProps extends Omit<ButtonProps, 'children'> {
 /**
  * A button that submits the active step.
  *
- * @see Docs https://saas-ui.dev/docs/components/forms/step-form
+ * @see Docs https://hp-ui.dev/docs/components/forms/step-form
  */
 export const NextButton: React.FC<NextButtonProps> = (props) => {
   const { label = 'Next', submitLabel = 'Complete', ...rest } = props

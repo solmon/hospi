@@ -21,4 +21,4 @@ $ npm i @hp-ui/nprogress  --save
 
 ## License
 
-MIT - Appulse Software
+MIT 

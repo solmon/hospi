@@ -16,4 +16,4 @@ $ npm i @hp-ui/date-picker  --save
 
 ## License
 
-MIT - Appulse Software
+MIT 

@@ -23,7 +23,7 @@ export interface DateInputProps extends DatePickerProps {
 /**
  * A Date form input with Calendar popover to allow users to enter or select a date value.
  *
- * @see Docs https://saas-ui.dev/docs/date-time/date-picker-input
+ * @see Docs https://hp-ui.dev/docs/date-time/date-picker-input
  */
 export const DateInput = forwardRef<DateInputProps, 'div'>((props, ref) => {
   const { children, calendarIcon, size, variant, ...rest } = props
@@ -52,7 +52,7 @@ DateInput.displayName = 'DateInput'
  *
  * A Date form input with Calendar popover to allow users to enter or select a date and time value.
  *
- * @see Docs https://saas-ui.dev/docs/date-time/date-picker-input
+ * @see Docs https://hp-ui.dev/docs/date-time/date-picker-input
  */
 export const DateTimeInput = forwardRef<DateInputProps, 'div'>((props, ref) => {
   const { children, ...rest } = props
@@ -77,7 +77,7 @@ interface DatePickerInputProps extends InputGroupProps {
  *
  * A Date form input with Calendar popover to allow users to enter or select a date and time value.
  *
- * @see Docs https://saas-ui.dev/docs/date-time/date-picker-input
+ * @see Docs https://hp-ui.dev/docs/date-time/date-picker-input
  */
 export const DatePickerInput = forwardRef<DatePickerInputProps, 'div'>(
   (props, ref) => {

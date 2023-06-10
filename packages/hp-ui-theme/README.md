@@ -22,4 +22,4 @@ $ npm i @hp-ui/theme  --save
 
 ## License
 
-MIT - Appulse Software
+MIT 

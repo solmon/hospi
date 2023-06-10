@@ -16,4 +16,4 @@ $ npm i @hp-ui/react-utils  --save
 
 ## License
 
-MIT - Appulse Software
+MIT 

@@ -7,7 +7,7 @@ import { useHotkeys, UseHotkeysOptions } from './use-hotkeys'
  * Accepts one key combination or a shortcut
  *
  * Shortcuts refer to a predefined hotkeys configuration.
- * @see https://www.saas-ui.dev/docs/navigation/hotkeys
+ * @see https://www.hp-ui.dev/docs/navigation/hotkeys
  *
  * For example:
  * ctrl+f or general.search

@@ -1,12 +1,12 @@
-import { FormProps, FormType } from '@saas-ui/forms'
+import { FormProps, FormType } from '@hp-ui/forms'
 import { ModalId } from './provider'
-import { AnyObjectSchema, YupFormType } from '@saas-ui/forms/yup'
+import { AnyObjectSchema, YupFormType } from '@hp-ui/forms/yup'
 import { FormDialogFieldOverrides } from './form'
-import { WithFields } from '@saas-ui/forms'
-import { FieldValues } from '@saas-ui/forms'
+import { WithFields } from '@hp-ui/forms'
+import { FieldValues } from '@hp-ui/forms'
 import type { z } from 'zod'
 import type { InferType } from 'yup'
-import { ZodFormType } from '@saas-ui/forms/zod'
+import { ZodFormType } from '@hp-ui/forms/zod'
 
 export type FormDialogHandler<T> = T extends YupFormType<
   infer FieldDefs,

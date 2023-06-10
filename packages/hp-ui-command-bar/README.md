@@ -56,4 +56,4 @@ const CmdBar = () => {
 
 ## License
 
-MIT - Appulse Software
+MIT 

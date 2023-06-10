@@ -1,4 +1,4 @@
-import type { AuthProviderProps, AuthToken } from '@saas-ui/auth'
+import type { AuthProviderProps, AuthToken } from '@hp-ui/auth'
 
 import type { Magic, MagicUserMetadata } from 'magic-sdk'
 

@@ -36,7 +36,7 @@ export interface EmptyStateProps
 /**
  * Display actionable feedback when no data is available.
  *
- * @see Docs https://saas-ui.dev/docs/components/data-display/empty-state
+ * @see Docs https://hp-ui.dev/docs/components/data-display/empty-state
  */
 export const EmptyState: React.FC<EmptyStateProps> = (props) => {
   const {

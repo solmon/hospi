@@ -31,7 +31,7 @@ export interface DateRangeInputProps extends DateRangePickerContainerProps {
  *
  * A Date form input with Calendar popover to allow users to enter or select a date range and time.
  *
- * @see Docs https://saas-ui.dev/docs/date-time/date-picker-input
+ * @see Docs https://hp-ui.dev/docs/date-time/date-picker-input
  */
 export const DateRangeInput = forwardRef<DateRangeInputProps, 'div'>(
   (props, ref) => {
@@ -64,7 +64,7 @@ interface DatePickerInputProps extends InputGroupProps {
  *
  * A Date form input with Calendar popover to allow users to enter or select a date range and time value.
  *
- * @see Docs https://saas-ui.dev/docs/date-time/date-picker-input
+ * @see Docs https://hp-ui.dev/docs/date-time/date-picker-input
  */
 const DateRangePickerInput = forwardRef<DatePickerInputProps, 'div'>(
   (props, ref) => {

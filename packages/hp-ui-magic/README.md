@@ -19,4 +19,4 @@ $ npm i @hp-ui/magic  --save
 
 ## License
 
-MIT - Appulse Software
+MIT 

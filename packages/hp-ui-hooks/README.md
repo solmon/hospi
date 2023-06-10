@@ -16,4 +16,4 @@ $ npm i @hp-ui/hooks  --save
 
 ## License
 
-MIT - Appulse Software
+MIT 

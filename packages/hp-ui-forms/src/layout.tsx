@@ -28,7 +28,7 @@ FormLayoutItem.displayName = 'FormLayoutItem'
  * Renders form items in a `SimpleGrid`
  * @see https://chakra-ui.com/docs/layout/simple-grid
  *
- * @see https://saas-ui.dev/docs/components/forms/form
+ * @see https://hp-ui.dev/docs/components/forms/form
  */
 export const FormLayout = ({ children, ...props }: FormLayoutProps) => {
   const theme = useTheme()

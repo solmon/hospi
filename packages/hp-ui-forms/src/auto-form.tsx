@@ -16,7 +16,7 @@ interface AutoFormOptions {
   /**
    * The schema.
    * Supports object schema, Zod, Yup or Ajv (JSON Schema).
-   * @see https://www.saas-ui.dev/docs/forms/auto-form
+   * @see https://www.hp-ui.dev/docs/forms/auto-form
    */
   schema: any
   /**
@@ -35,7 +35,7 @@ export interface AutoFormProps<
 /**
  * The wrapper component that manages context and state.
  *
- * @see Docs https://saas-ui.dev/docs/components/forms/auto-form
+ * @see Docs https://hp-ui.dev/docs/components/forms/auto-form
  */
 export const AutoForm = forwardRef(
   <

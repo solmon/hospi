@@ -13,7 +13,7 @@ import { createContext } from '@chakra-ui/react-utils'
 
 import { Kbd } from '@chakra-ui/react'
 
-import { SearchInput, SearchInputProps } from '@saas-ui/core'
+import { SearchInput, SearchInputProps } from '@hp-ui/core'
 
 const [StylesProvider, useStyles] = createStylesContext('SuiHotkeys')
 

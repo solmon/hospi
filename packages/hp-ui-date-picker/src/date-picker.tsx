@@ -142,7 +142,7 @@ export interface DatePickerProps<
  *
  * Allow users to select a date and time value.
  *
- * @see Docs https://saas-ui.dev/docs/date-time/date-picker
+ * @see Docs https://hp-ui.dev/docs/date-time/date-picker
  */
 export const DatePicker: React.FC<DatePickerProps> = (props) => {
   const {
@@ -226,7 +226,7 @@ export const DatePicker: React.FC<DatePickerProps> = (props) => {
  *
  * Allow users to select a date and time value.
  *
- * @see Docs https://saas-ui.dev/docs/date-time/date-picker
+ * @see Docs https://hp-ui.dev/docs/date-time/date-picker
  */
 export interface DatePickerStaticProps extends DatePickerContainerProps {}
 

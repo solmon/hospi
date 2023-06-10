@@ -6,7 +6,7 @@ import { ConfirmDialogProps } from './dialog'
 import { MenuDialogProps } from './menu'
 import { FormDialogProps } from './form'
 import { defaultModals } from './default-modals'
-import { FieldValues, FormType } from '@saas-ui/forms'
+import { FieldValues, FormType } from '@hp-ui/forms'
 import { FormDialogHandler, FormHandler } from './types'
 
 export interface ModalsContextValue<

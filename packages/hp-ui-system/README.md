@@ -1,4 +1,4 @@
-# @saas-ui/system 
+# @hp-ui/system 
 
 Description
 
@@ -16,4 +16,4 @@ $ npm i @hp-ui/system  --save
 
 ## License
 
-MIT - Appulse Software
+MIT 

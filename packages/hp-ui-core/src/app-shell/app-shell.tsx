@@ -43,7 +43,7 @@ export interface AppShellProps
 /**
  * The App Shell defines the main structure of your app.
  *
- * @see Docs https://saas-ui.dev/docs/components/layout/app-shell
+ * @see Docs https://hp-ui.dev/docs/components/layout/app-shell
  */
 export const AppShell: React.FC<AppShellProps> = (props: AppShellProps) => {
   const styles = useMultiStyleConfig('SuiAppShell', props) as Record<

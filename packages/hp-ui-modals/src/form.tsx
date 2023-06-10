@@ -7,7 +7,7 @@ import {
   forwardRef,
   ButtonProps,
 } from '@chakra-ui/react'
-import { runIfFn } from '@saas-ui/react-utils'
+import { runIfFn } from '@hp-ui/react-utils'
 
 import {
   Form,
@@ -19,10 +19,10 @@ import {
   FieldProps,
   FormType,
   DefaultFieldOverrides,
-} from '@saas-ui/forms'
+} from '@hp-ui/forms'
 
-import { YupFormType } from '@saas-ui/forms/yup'
-import { ZodFormType } from '@saas-ui/forms/zod'
+import { YupFormType } from '@hp-ui/forms/yup'
+import { ZodFormType } from '@hp-ui/forms/zod'
 
 import { BaseModal, BaseModalProps } from './modal'
 
@@ -222,6 +222,6 @@ export function createFormDialog<
 /**
  * Can be used to quickly request information from people without leaving the current page.
  *
- * @see Docs https://saas-ui.dev/docs/components/overlay/form-dialog
+ * @see Docs https://hp-ui.dev/docs/components/overlay/form-dialog
  */
 export const FormDialog = createFormDialog(Form)

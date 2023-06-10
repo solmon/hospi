@@ -52,7 +52,7 @@ const motionPresets = {
 /**
  * Side navigation, commonly used as the primary navigation
  *
- * @see Docs https://saas-ui.dev/docs/components/layout/sidebar
+ * @see Docs https://hp-ui.dev/docs/components/layout/sidebar
  */
 export const Sidebar = forwardRef<SidebarProps, 'nav'>((props, ref) => {
   const styles = useMultiStyleConfig('SuiSidebar', props)
@@ -174,7 +174,7 @@ Sidebar.id = 'Sidebar'
 /**
  * Button that toggles the sidebar visibility.
  *
- * @see Docs https://saas-ui.dev/docs/components/layout/sidebar
+ * @see Docs https://hp-ui.dev/docs/components/layout/sidebar
  */
 export const SidebarToggleButton: React.FC<SidebarToggleButtonProps> = (
   props
@@ -219,7 +219,7 @@ export const SidebarToggleButton: React.FC<SidebarToggleButtonProps> = (
 /**
  * Overlay shown when sidebar is open on mobile.
  *
- * @see Docs https://saas-ui.dev/docs/components/layout/sidebar
+ * @see Docs https://hp-ui.dev/docs/components/layout/sidebar
  */
 export const SidebarOverlay: React.FC<SidebarOverlayProps> = (props) => {
   const { onClose, isOpen, isMobile } = useSidebarContext()
@@ -258,7 +258,7 @@ SidebarToggleButton.displayName = 'SidebarToggleButton'
 /**
  * Sidebar section that can contain sidebar items.
  *
- * @see Docs https://saas-ui.dev/docs/components/layout/sidebar
+ * @see Docs https://hp-ui.dev/docs/components/layout/sidebar
  */
 export const SidebarSection: React.FC<SidebarSectionProps> = (props) => {
   const { direction = 'column', ...rest } = props

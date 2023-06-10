@@ -90,4 +90,4 @@ function MyComponent() {
 
 ## License
 
-MIT - Appulse Software
+MIT 

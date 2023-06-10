@@ -27,4 +27,4 @@ $ npm i @hp-ui/data-table  --save
 
 ## License
 
-MIT - Appulse Software
+MIT 

@@ -43,7 +43,7 @@ export type AjvFormType<
 /**
  * Create a Form component with AJV validation that accepts JSON Type Definition schema
  *
- * @see Docs https://saas-ui.dev/docs/components/forms/form
+ * @see Docs https://hp-ui.dev/docs/components/forms/form
  * @see https://ajv.js.org/json-type-definition.html
  */
 export function createAjvForm<FieldDefs>(

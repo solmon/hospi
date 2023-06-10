@@ -26,4 +26,4 @@ You can find the documentation on our website:
 
 ## License
 
-MIT - Appulse Software
+MIT 

@@ -43,7 +43,7 @@ export interface SelectButtonProps extends ButtonProps {}
 /**
  * Button that opens the select menu and displays the selected value.
  *
- * @see https://saas-ui.dev/docs/components/forms/select
+ * @see https://hp-ui.dev/docs/components/forms/select
  */
 export const SelectButton = forwardRef<SelectButtonProps, 'button'>(
   (props, ref) => {
@@ -124,7 +124,7 @@ SelectButton.displayName = 'SelectButton'
 /**
  * Allow users to select a value from a list of options.
  *
- * @see https://saas-ui.dev/docs/components/forms/select
+ * @see https://hp-ui.dev/docs/components/forms/select
  */
 export const Select = forwardRef<SelectProps, 'select'>((props, ref) => {
   const { name, children, isDisabled, multiple, ...rest } = props
@@ -159,7 +159,7 @@ export interface SelectListProps extends MenuListProps {}
 /**
  * The list of options to choose from.
  *
- * @see https://saas-ui.dev/docs/components/forms/select
+ * @see https://hp-ui.dev/docs/components/forms/select
  */
 export const SelectList: React.FC<SelectListProps> = (props) => {
   const { defaultValue, value, options, multiple, onChange } =
@@ -190,7 +190,7 @@ Select.displayName = 'Select'
 /**
  * An option in a select list
  *
- * @see https://saas-ui.dev/docs/components/forms/select
+ * @see https://hp-ui.dev/docs/components/forms/select
  */
 export const SelectOption = forwardRef<MenuItemOptionProps, 'button'>(
   (props, ref) => {

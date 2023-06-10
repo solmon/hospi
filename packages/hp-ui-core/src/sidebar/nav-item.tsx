@@ -98,7 +98,7 @@ export interface NavItemProps
 /**
  * Navigation item used in the sidebar.
  *
- * @see Docs https://saas-ui.dev/docs/components/layout/sidebar
+ * @see Docs https://hp-ui.dev/docs/components/layout/sidebar
  */
 export const NavItem = forwardRef<NavItemProps, 'a'>((props, ref) => {
   const {

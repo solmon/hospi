@@ -1,4 +1,4 @@
-import { SaasProvider } from '@saas-ui/react'
+import { SaasProvider } from '@hp-ui/react'
 import '@testing-library/jest-dom/extend-expect'
 import { render as rtlRender, RenderOptions } from '@testing-library/react'
 import { toHaveNoViolations } from 'jest-axe'

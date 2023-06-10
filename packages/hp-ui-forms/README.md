@@ -72,4 +72,4 @@ function App() {
 
 ## License
 
-MIT - Appulse Software
+MIT 

@@ -26,7 +26,7 @@ import {
 
 import { cx } from '@chakra-ui/utils'
 
-import { ChevronDownIcon, ChevronUpIcon, Link } from '@saas-ui/core'
+import { ChevronDownIcon, ChevronUpIcon, Link } from '@hp-ui/core'
 
 export type { TableInstance, ColumnDef }
 

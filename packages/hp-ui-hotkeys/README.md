@@ -68,7 +68,7 @@ import {
   HotkeysLiist,
   HostkeysSearch,
   HotkeysListItems,
-} from '@saas-ui/hotkeys'
+} from '@hp-ui/hotkeys'
 
 export const MyComponent = () => {
   const help = useHotkeysShortcut('general.help', () => {
@@ -92,7 +92,7 @@ import {
   HotkeysLiist,
   HostkeysSearch,
   HotkeysListItems,
-} from '@saas-ui/hotkeys'
+} from '@hp-ui/hotkeys'
 
 export const HotkeysListModal = () => {
   const searchRef = useRef<HTMLInputElement | null>(null)
@@ -134,7 +134,7 @@ export const HotkeysListModal = () => {
 If you're not using Chakra UI or don't want to use the provider, you can use the `useHotkeys` hook standalone.
 
 ```jsx
-import { useHotkeys } from '@saas-ui/hotkeys'
+import { useHotkeys } from '@hp-ui/hotkeys'
 
 const Component = () => {
   useHotkeys('/', () => {
@@ -147,4 +147,4 @@ const Component = () => {
 
 ## License
 
-MIT - Appulse Software
+MIT 

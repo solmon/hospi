@@ -23,9 +23,9 @@ $ npm i @hp-ui/clerk  --save
 Add `ClerkAuthProvider` to your app root and add `authService` to `SaasProvider`.
 
 ```ts
-import { ClerkAuthProvider } from '@saas-ui/clerk'
+import { ClerkAuthProvider } from '@hp-ui/clerk'
 
-import { SaasProvider, AuthProvider } from '@saas-ui/react'
+import { SaasProvider, AuthProvider } from '@hp-ui/react'
 
 const App = ({ children }) => {
   return (
@@ -42,4 +42,4 @@ const App = ({ children }) => {
 
 ## License
 
-MIT - Appulse Software
+MIT 

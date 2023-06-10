@@ -20,7 +20,7 @@ export interface TimelineProps
 /**
  * Display a list of events in chronological order.
  *
- * @see Docs https://saas-ui.dev/docs/components/data-display/timeline
+ * @see Docs https://hp-ui.dev/docs/components/data-display/timeline
  */
 export const Timeline: React.FC<TimelineProps> = (props) => {
   const { children, ...rest } = props

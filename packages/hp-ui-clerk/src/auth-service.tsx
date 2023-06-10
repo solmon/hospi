@@ -8,7 +8,7 @@ import {
   User,
   AuthProviderProps,
   AuthStateChangeCallback,
-} from '@saas-ui/auth'
+} from '@hp-ui/auth'
 
 type Providers =
   | 'facebook'

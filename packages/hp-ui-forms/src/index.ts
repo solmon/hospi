@@ -60,7 +60,7 @@ import { createStepForm } from './create-step-form'
 /**
  * Form component.
  *
- * @see Docs https://saas-ui.dev/docs/components/forms/form
+ * @see Docs https://hp-ui.dev/docs/components/forms/form
  */
 export const Form = createForm()
 
@@ -69,7 +69,7 @@ export { createStepForm } from './create-step-form'
 /**
  * Multi-step form component.
  *
- * @see Docs https://saas-ui.dev/docs/components/forms/step-form
+ * @see Docs https://hp-ui.dev/docs/components/forms/step-form
  */
 export const StepForm = createStepForm()
 

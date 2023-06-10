@@ -142,7 +142,7 @@ export interface DatePickerTimeFieldProps
  *
  * A Date form input with Calendar popover to allow users to enter or select a date and time value.
  *
- * @see Docs https://saas-ui.dev/docs/date-time/date-picker-input
+ * @see Docs https://hp-ui.dev/docs/date-time/date-picker-input
  */
 export const DatePickerTimeField: React.FC<DatePickerTimeFieldProps> = (
   props

@@ -109,7 +109,7 @@ export const NavGroupContent: React.FC<HTMLChakraProps<'div'>> = (props) => {
 /**
  * Navigation group containing nav items, used in Sidebar.
  *
- * @see Docs https://saas-ui.dev/docs/components/layout/sidebar
+ * @see Docs https://hp-ui.dev/docs/components/layout/sidebar
  */
 export const NavGroup: React.FC<NavGroupProps> = (props) => {
   const {

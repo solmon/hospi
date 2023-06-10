@@ -1,4 +1,4 @@
-import { createIcon } from '@saas-ui/core'
+import { createIcon } from '@hp-ui/core'
 
 export const CalendarIcon = createIcon({
   displayName: 'CalendarIcon',

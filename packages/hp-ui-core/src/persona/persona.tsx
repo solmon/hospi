@@ -41,7 +41,7 @@ export interface PresenceOptions {
  * Or add a custom presence value
  * theme.semanticTokens.colors['presence.vacay'] = 'blue.500'
  *
- * @see Docs https://saas-ui.dev/docs/components/data-display/persona
+ * @see Docs https://hp-ui.dev/docs/components/data-display/persona
  */
 export const Presence: PresenceOptions = {
   online: {
@@ -135,7 +135,7 @@ export interface PersonaProps
 /**
  * The wrapper component that handles default composition.
  *
- * @see Docs https://saas-ui.dev/docs/components/data-display/persona
+ * @see Docs https://hp-ui.dev/docs/components/data-display/persona
  */
 export const Persona: React.FC<PersonaProps> = (props) => {
   const {
@@ -211,7 +211,7 @@ export interface PersonaContainerProps
 /**
  * The container component that provides context and styles.
  *
- * @see Docs https://saas-ui.dev/docs/components/data-display/persona
+ * @see Docs https://hp-ui.dev/docs/components/data-display/persona
  */
 export const PersonaContainer = forwardRef<PersonaContainerProps, 'div'>(
   (props, ref) => {
@@ -291,7 +291,7 @@ interface PresenceAvatarProps extends PresenceAvatarOptions, AvatarProps {}
 /**
  * An avatar with optional status badge.
  *
- * @see Docs https://saas-ui.dev/docs/components/data-display/persona
+ * @see Docs https://hp-ui.dev/docs/components/data-display/persona
  */
 export const PersonaAvatar = forwardRef<PresenceAvatarProps, 'span'>(
   (props, ref) => {
@@ -384,7 +384,7 @@ PersonaAvatar.displayName = 'PersonaAvatar'
 /**
  * Wrapper component for the labels.
  *
- * @see Docs https://saas-ui.dev/docs/components/data-display/persona
+ * @see Docs https://hp-ui.dev/docs/components/data-display/persona
  */
 export const PersonaDetails = forwardRef<PersonaProps, 'div'>((props, ref) => {
   const { children, className, ...rest } = props
@@ -417,7 +417,7 @@ PersonaDetails.displayName = 'PersonaDetails'
 /**
  * The main label, usually a name.
  *
- * @see Docs https://saas-ui.dev/docs/components/data-display/persona
+ * @see Docs https://hp-ui.dev/docs/components/data-display/persona
  */
 export const PersonaLabel = forwardRef<HTMLChakraProps<'span'>, 'span'>(
   (props, ref) => {
@@ -438,7 +438,7 @@ PersonaLabel.displayName = 'PersonaLabel'
 /**
  * The secondary label, usually the role of a person.
  *
- * @see Docs https://saas-ui.dev/docs/components/data-display/persona
+ * @see Docs https://hp-ui.dev/docs/components/data-display/persona
  */
 export const PersonaSecondaryLabel = forwardRef<
   HTMLChakraProps<'span'>,
@@ -460,7 +460,7 @@ PersonaSecondaryLabel.displayName = 'PersonaSecondaryLabel'
 /**
  * The tertiary label, typically a status message.
  *
- * @see Docs https://saas-ui.dev/docs/components/data-display/persona
+ * @see Docs https://hp-ui.dev/docs/components/data-display/persona
  */
 export const PersonaTertiaryLabel = forwardRef<HTMLChakraProps<'span'>, 'span'>(
   (props, ref) => {
