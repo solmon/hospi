@@ -1,0 +1,17 @@
+{
+  "extends": "../../tsconfig.base.json",
+  "compilerOptions": {
+    "paths": {
+      "@hp-ui/core/icons": ["../hp-ui-core/src/icons"]
+    }
+  },
+  "include": ["src"],
+  "exclude": [
+    "src/tests",
+    "**/*.spec.ts",
+    "**/*.spec.tsx",
+    "**/*.test.ts",
+    "**/*.test.tsx",
+    "**/*/*.stories.tsx"
+  ]
+}

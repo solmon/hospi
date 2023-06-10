@@ -1,0 +1,54 @@
+{
+  "name": "@hp-ui/system",
+  "version": "1.0.0",
+  "description": "Saas UI system utilities",
+  "source": "src/index.ts",
+  "exports": {
+    ".": {
+      "require": "./dist/index.js",
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs"
+    },
+    "./src": {
+      "default": "./src/index.ts"
+    }
+  },
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "scripts": {
+    "clean": "rimraf --no-glob ./dist",
+    "build": "tsup src/index.ts --config tsup.config.ts",
+    "lint": "eslint src --ext .ts,.tsx,.js,.jsx --config ../../.eslintrc.js",
+    "lint:staged": "lint-staged --allow-empty --config ../../lint-staged.config.js",
+    "typecheck": "tsc --noEmit"
+  },
+  "files": [
+    "dist",
+    "src"
+  ],
+  "sideEffects": false,
+  "publishConfig": {
+    "access": "public"
+  },
+  "author": "Solsy <solmon@gmail.com>",
+  "license": "MIT",
+  "homepage": "https://hospi.org/",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/solmon/hospi",
+    "directory": "packages/hp-ui-system"
+  },
+  "keywords": [
+    "hospi"
+  ],
+  "dependencies": {
+    "@chakra-ui/styled-system": "^2.9.0",
+    "@chakra-ui/utils": "^2.0.15",
+    "react-fast-compare": "^3.2.2"
+  },
+  "peerDependencies": {
+    "@chakra-ui/system": ">=2.3.8",
+    "react": ">=18.0.0"
+  }
+}

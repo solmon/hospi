@@ -2,7 +2,7 @@ import * as React from 'react'
 
 const { createContext, useState, useContext, useEffect, useCallback } = React
 
-import { usePromise } from '@saas-ui/hooks'
+import { usePromise } from '@hp-ui/hooks'
 
 export type AuthTypeEnum = 'magiclink' | 'password'
 

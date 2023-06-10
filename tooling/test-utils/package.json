@@ -1,0 +1,50 @@
+{
+  "name": "@hp-ui/test-utils",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Testing utilities for Chakra UI's components",
+  "author": "Solsy <solmon@gmail.com>",
+    "license": "MIT",
+    "homepage": "https://hospi.org/",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/solmon/hospi",
+        "directory": "tooling/test-utils"
+    },
+    "keywords": [
+        "hospi"
+    ],
+  "main": "src/index.ts",
+  "dependencies": {
+    "@emotion/jest": "^11.11.0",
+    "@hp-ui/react": "workspace:*",
+    "@storybook/testing-react": "^2.0.1",
+    "@testing-library/dom": "^9.3.0",
+    "@testing-library/jest-dom": "^5.16.5",
+    "@testing-library/react": "^14.0.0",
+    "@testing-library/react-hooks": "8.0.1",
+    "@testing-library/user-event": "14.4.3",
+    "@types/jest-axe": "3.5.5",
+    "jest-axe": "7.0.1",
+    "jest-matchmedia-mock": "^1.1.0",
+    "react-test-renderer": "^18.2.0"
+  },
+  "peerDependencies": {
+    "@chakra-ui/react": ">=2.3.9",
+    "@chakra-ui/system": ">=2.3.8",
+    "@emotion/react": ">=11",
+    "@emotion/styled": ">=11",
+    "@storybook/addon-a11y": ">=6",
+    "@storybook/addons": ">=6",
+    "@storybook/client-api": ">=6",
+    "@storybook/preview-web": ">=6",
+    "@storybook/react": ">=6",
+    "framer-motion": ">=5.5.0",
+    "jest": ">=6",
+    "react": ">=18.0.0",
+    "react-dom": ">=18.0.0"
+  },
+  "devDependencies": {
+    "react": "^18.2.0"
+  }
+}

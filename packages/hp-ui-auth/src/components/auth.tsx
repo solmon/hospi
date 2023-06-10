@@ -8,7 +8,7 @@ import { ForgotPasswordView } from './forgot-password-view'
 import { UpdatePasswordView } from './update-password-view'
 import { OtpView } from './otp-view'
 import { AvailableProviders } from './forms/providers'
-import { FormProps } from '@saas-ui/forms'
+import { FormProps } from '@hp-ui/forms'
 import { error } from 'console'
 
 export const VIEWS = {

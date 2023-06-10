@@ -1,10 +1,14 @@
 {
   "name": "@hp-ui/auth",
   "version": "1.0.0",
-  "description": "Core Authentication components for Hospi",
+  "description": "Authentication provider and components for Chakra UI",
   "source": "src/index.ts",
   "exports": {
-    ".": {},
+    ".": {
+      "require": "./dist/index.js",
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs"
+    },
     "./src": {
       "default": "./src/index.ts"
     }
@@ -16,6 +20,7 @@
     "clean": "rimraf --no-glob ./dist",
     "build": "tsup src/index.ts --config tsup.config.ts",
     "lint": "eslint src --ext .ts,.tsx,.js,.jsx --config ../../.eslintrc.js",
+    "lint:staged": "lint-staged --allow-empty --config ../../lint-staged.config.js",
     "typecheck": "tsc --noEmit"
   },
   "files": [
@@ -23,16 +28,33 @@
     "src",
     "services"
   ],
+  "sideEffects": false,
+  "publishConfig": {
+    "access": "public"
+  },
+  "author": "Solsy <solmon@gmail.com>",
+  "license": "MIT",
+  "homepage": "https://hospi.org/",
   "repository": {
     "type": "git",
     "url": "https://github.com/solmon/hospi",
     "directory": "packages/hp-ui-auth"
   },
+  "keywords": [
+    "hospi"
+  ],
   "dependencies": {
     "@chakra-ui/utils": "^2.0.15",
-    "@saas-ui/core": "^2.0.0-next.0",
-    "@saas-ui/forms": "^1.5.5",
-    "@saas-ui/hooks": "^1.2.2"
+    "@hp-ui/core": "workspace:*",
+    "@hp-ui/forms": "workspace:*",
+    "@hp-ui/hooks": "workspace:*"
   },
-  "packageManager": "yarn@3.5.1"
+  "peerDependencies": {
+    "@chakra-ui/react": ">=2.4.9",
+    "@emotion/react": ">=11.0.0",
+    "@emotion/styled": ">=11.0.0",
+    "framer-motion": ">=6.0.0",
+    "react": ">=18.0.0",
+    "react-dom": ">=18.0.0"
+  }
 }

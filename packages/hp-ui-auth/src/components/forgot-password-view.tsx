@@ -1,4 +1,4 @@
-import { SubmitHandler } from '@saas-ui/forms'
+import { SubmitHandler } from '@hp-ui/forms'
 import { useResetPassword } from '../provider'
 import { AuthFormContainer, AuthFormTitle, AuthViewOptions } from './auth-form'
 import {

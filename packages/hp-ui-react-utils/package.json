@@ -1,0 +1,52 @@
+{
+  "name": "@hp-ui/react-utils",
+  "version": "1.0.0",
+  "description": "React utilities and helpers for Chakra UI",
+  "source": "src/index.ts",
+  "exports": {
+    ".": {
+      "require": "./dist/index.js",
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs"
+    },
+    "./src": {
+      "default": "./src/index.ts"
+    }
+  },
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "scripts": {
+    "clean": "rimraf --no-glob ./dist",
+    "build": "tsup src/index.ts --config tsup.config.ts",
+    "lint": "eslint src --ext .ts,.tsx,.js,.jsx --config ../../.eslintrc.js",
+    "lint:staged": "lint-staged --allow-empty --config ../../lint-staged.config.js",
+    "typecheck": "tsc --noEmit"
+  },
+  "files": [
+    "dist",
+    "src"
+  ],
+  "sideEffects": false,
+  "publishConfig": {
+    "access": "public"
+  },
+  "author": "Solsy <solmon@gmail.com>",
+  "license": "MIT",
+  "homepage": "https://hospi.org/",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/solmon/hospi",
+    "directory": "packages/hp-ui-react-utils"
+  },
+  "keywords": [
+    "hospi"
+  ],
+  "dependencies": {
+    "@chakra-ui/utils": "^2.0.15"
+  },
+  "peerDependencies": {
+    "@chakra-ui/react": ">=2.4.6",
+    "react": ">=18.0.0"
+  }
+}

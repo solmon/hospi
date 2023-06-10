@@ -1,0 +1,74 @@
+{
+  "name": "@hp-ui/date-picker",
+  "version": "1.0.0",
+  "description": "Chakra UI - Date Picker Component",
+  "source": "src/index.ts",
+  "exports": {
+    ".": {
+      "require": "./dist/index.js",
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs"
+    },
+    "./src": {
+      "default": "./src/index.ts"
+    }
+  },
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "scripts": {
+    "clean": "rimraf --no-glob ./dist",
+    "build": "tsup src/index.ts --config tsup.config.ts",
+    "lint": "eslint src --ext .ts,.tsx,.js,.jsx --config ../../.eslintrc.js",
+    "lint:staged": "lint-staged --allow-empty --config ../../lint-staged.config.js",
+    "typecheck": "tsc --noEmit"
+  },
+  "files": [
+    "dist",
+    "src"
+  ],
+  "sideEffects": false,
+  "publishConfig": {
+    "access": "public"
+  },
+  "author": "Solsy <solmon@gmail.com>",
+  "license": "MIT",
+  "homepage": "https://hospi.org/",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/solmon/hospi",
+    "directory": "packages/hp-ui-date-picker"
+  },
+  "keywords": [
+    "hospi"
+  ],
+  "dependencies": {
+    "@chakra-ui/icons": "^2.0.19",
+    "@chakra-ui/react-utils": "^2.0.12",
+    "@chakra-ui/styled-system": "^2.9.0",
+    "@chakra-ui/theme-tools": "^2.0.17",
+    "@chakra-ui/utils": "^2.0.15",
+    "@internationalized/date": "^3.2.0",
+    "@react-aria/calendar": "^3.2.0",
+    "@react-aria/datepicker": "^3.4.0",
+    "@react-aria/i18n": "^3.7.1",
+    "@react-stately/calendar": "^3.2.0",
+    "@react-stately/datepicker": "^3.4.0",
+    "@hp-ui/core": "workspace:*",
+    "@hp-ui/modals": "workspace:*"
+  },
+  "peerDependencies": {
+    "@chakra-ui/react": ">=2.4.9",
+    "@emotion/react": ">=11.0.0",
+    "@emotion/styled": ">=11.0.0",
+    "framer-motion": ">=6.0.0",
+    "react": ">=18.0.0",
+    "react-dom": ">=18.0.0"
+  },
+  "devDependencies": {
+    "@react-types/datepicker": "^3.3.0",
+    "@react-types/shared": "^3.18.0",
+    "@hp-ui/forms": "workspace:*",
+    "date-fns": "^2.30.0"
+  }
+}

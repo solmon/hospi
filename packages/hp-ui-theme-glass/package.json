@@ -1,0 +1,63 @@
+{
+  "name": "@hp-ui/theme-glass",
+  "version": "1.0.0",
+  "description": "A Linear inspired Chakra UI theme",
+  "source": "src/index.ts",
+  "exports": {
+    ".": {
+      "require": "./dist/index.js",
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs"
+    },
+    "./src": {
+      "default": "./src/index.ts"
+    }
+  },
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "scripts": {
+    "clean": "rimraf --no-glob ./dist",
+    "build": "tsup src/index.ts --config tsup.config.ts",
+    "lint": "eslint src --ext .ts,.tsx,.js,.jsx --config ../../.eslintrc.js",
+    "lint:staged": "lint-staged --allow-empty --config ../../lint-staged.config.js",
+    "typecheck": "tsc --noEmit"
+  },
+  "files": [
+    "dist",
+    "src"
+  ],
+  "sideEffects": false,
+  "publishConfig": {
+    "access": "public"
+  },
+  "author": "Solsy <solmon@gmail.com>",
+  "license": "MIT",
+  "homepage": "https://hospi.org/",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/solmon/hospi",
+    "directory": "packages/hp-ui-theme-glass"
+  },
+  "keywords": [
+    "hospi"
+  ],
+  "dependencies": {
+    "@chakra-ui/anatomy": "^2.1.2",
+    "@chakra-ui/styled-system": "^2.9.0",
+    "@chakra-ui/theme-tools": "^2.0.17",
+    "@chakra-ui/utils": "^2.0.15"
+  },
+  "peerDependencies": {
+    "@chakra-ui/react": ">=2.4.6",
+    "@emotion/react": ">=11.1.5",
+    "@emotion/styled": ">=11.1.5",
+    "framer-motion": ">=4.1.17",
+    "react": ">=18.0.0",
+    "react-dom": ">=18.0.0"
+  },
+  "devDependencies": {
+    "@hp-ui/react": "workspace:*",
+    "react-icons": "^4.8.0"
+  }
+}

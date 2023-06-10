@@ -1,7 +1,7 @@
 {
   "name": "@hp-ui/theme",
   "version": "1.0.0",
-  "description": "hp UI theme package",
+  "description": "hospi theme package",
   "source": "src/index.ts",
   "exports": {
     ".": {
@@ -35,6 +35,7 @@
     "clean": "rimraf --no-glob ./dist",
     "build": "tsup src/index.ts src/anatomy/index.ts --config tsup.config.ts",
     "lint": "eslint src --ext .ts,.tsx,.js,.jsx --config ../../.eslintrc.js",
+    "lint:staged": "lint-staged --allow-empty --config ../../lint-staged.config.js",
     "typecheck": "tsc --noEmit"
   },
   "files": [
@@ -45,15 +46,17 @@
   "publishConfig": {
     "access": "public"
   },
-  "author": "",
+  "author": "Solsy <solmon@gmail.com>",
   "license": "MIT",
-  "homepage": "http://hospi.org/",
+  "homepage": "https://hospi.org/",
   "repository": {
     "type": "git",
-    "url": "",
+    "url": "https://github.com/solmon/hospi",
     "directory": "packages/hp-ui-theme"
   },
-  "keywords": [],
+  "keywords": [
+    "hospi"
+  ],
   "dependencies": {
     "@chakra-ui/anatomy": "^2.1.1",
     "@chakra-ui/styled-system": "^2.9.0",

@@ -11,8 +11,8 @@ import {
 } from '@chakra-ui/react'
 import { cx } from '@chakra-ui/utils'
 
-import { FieldErrors } from '@saas-ui/forms'
-import { Divider } from '@saas-ui/core'
+import { FieldErrors } from '@hp-ui/forms'
+import { Divider } from '@hp-ui/core'
 
 import { Providers, AvailableProviders } from './forms/providers'
 import { AuthTypeEnum, AuthActionEnum, useAuth } from '../provider'

@@ -1,4 +1,4 @@
-import { SubmitHandler } from '@saas-ui/forms'
+import { SubmitHandler } from '@hp-ui/forms'
 import { useOtp } from '../provider'
 import { AuthFormContainer, AuthViewOptions, AuthFormTitle } from './auth-form'
 import { OtpForm, OtpFormProps, OtpSubmitParams } from './forms/otp-form'

@@ -1,6 +1,6 @@
 import * as React from 'react'
 
-import { Form, FormProps, FormLayout, Field, FieldValues } from '@saas-ui/forms'
+import { Form, FormProps, FormLayout, Field, FieldValues } from '@hp-ui/forms'
 
 import { LoginButton } from '../login-button'
 

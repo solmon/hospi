@@ -1,5 +1,5 @@
 import { HTMLChakraProps, ThemingProps } from '@chakra-ui/react'
-import { SubmitHandler } from '@saas-ui/forms'
+import { SubmitHandler } from '@hp-ui/forms'
 import { useAuth, useLogin } from '../provider'
 import {
   AuthFormOptions,

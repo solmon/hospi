@@ -1,0 +1,13 @@
+{
+  "extends": "../../../tsconfig.base.json",
+  "include": ["./src"],
+  "compilerOptions": {
+    "strictNullChecks": true,
+    "declaration": true,
+    "declarationMap": true,
+    "baseUrl": ".",
+    "paths": {
+      "@hp-ui/forms": ["../"]
+    }
+  }
+}
