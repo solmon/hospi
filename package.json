@@ -1,5 +1,5 @@
 {
-    "name": "hospi-ui",
+    "name": "hospi",
     "description": "The frontend stack for SaaS companies",
     "private": true,
     "author": "Solsy <solmon@gmail.com>",
@@ -14,7 +14,7 @@
     ],
     "scripts": {
         "w": "yarn workspace",
-        "dev:web": "yarn w website dev",
+        "dev:web": "yarn w hospi-ui dev",
         "dev:palette": "yarn w palette-docs dev",
         "publish:next": "yarn workspaces foreach --from '@hp-ui/*' npm publish --access public --tag next",
         "publish": "yarn workspaces foreach -p --from '@hp-ui/*' npm publish && yarn changeset tag",
@@ -23,14 +23,14 @@
         "lint": "turbo run lint",
         "lint:staged": "lint-staged --allow-empty --config lint-staged.config.js",
         "create:pkg": "hygen package chakra-component",
-        "build:web": "yarn w website build",
-        "build:tokens": "chakra-cli tokens packages/hp-ui-theme/src/hp-ui",
+        "build:web": "yarn w hospi-ui build",
+        "build:tokens": "chakra-cli tokens packages/hp-ui-theme/dist/index.mjs",
         "build:packages": "turbo run build --concurrency=5 --no-deps --continue && yarn build:tokens",
         "clean:packages": "turbo run clean",
         "preinstall": "rm -rf node_modules/odiff-bin"
     },
     "workspaces": [
-        "apps/website",
+        "apps/hospi-ui",
         "packages/hp-ui-*",
         "tooling/next-workspaces",
         "tooling/test-utils",

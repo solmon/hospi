@@ -13,6 +13,7 @@ export interface SidebarOptions {
    * Spacing between child elements.
    */
   spacing?: SystemProps['margin']
+  breakpoints?: Record<string, boolean>
   /**
    * Define the for the mobile nav. Use `false` to disable the mobile nav.
    *

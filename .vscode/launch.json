@@ -21,13 +21,13 @@
             "type": "node-terminal",
             "request": "launch",
             "command": "npm run dev",
-            "cwd": "${workspaceFolder}/hospicoreui"
+            "cwd": "${workspaceFolder}/apps/hospi-ui"
           },
           {
             "name": "Next.js: debug client-side",
             "type": "chrome",
             "request": "launch",
-            "cwd": "${workspaceFolder}/hospicoreui",
+            "cwd": "${workspaceFolder}/apps/hospi-ui",
             "url": "http://localhost:3000"
           },
           {
@@ -35,7 +35,7 @@
             "type": "node-terminal",
             "request": "launch",
             "command": "npm run dev",
-            "cwd": "${workspaceFolder}/hospicoreui",
+            "cwd": "${workspaceFolder}/apps/hospi-ui",
             "serverReadyAction": {
               "pattern": "started server on .+, url: (https?://.+)",
               "uriFormat": "%s",

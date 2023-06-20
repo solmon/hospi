@@ -1,3 +1,4 @@
+"use client"
 import * as React from 'react'
 import { createContext } from '@chakra-ui/react-utils'
 import { useBreakpointValue, useDisclosure } from '@chakra-ui/react'
@@ -17,11 +18,12 @@ export interface UseAppShellProps {
 export const useAppShell = (props: UseAppShellProps) => {
   const disclosure = useDisclosure()
 
-  const breakpoints = getBreakpoints(props.toggleBreakpoint)
+  // const breakpoints = getBreakpoints(props.toggleBreakpoint)
 
-  const isMobile = useBreakpointValue(breakpoints, {
-    fallback: props.toggleBreakpoint || 'lg',
-  })
+  // const isMobile = useBreakpointValue(breakpoints, {
+  //   fallback: props.toggleBreakpoint || 'lg',
+  // })
+  const isMobile = false;
 
   return {
     isSidebarOpen: disclosure.isOpen,
