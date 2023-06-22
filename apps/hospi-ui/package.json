@@ -6,12 +6,12 @@
   "license": "MIT",
   "homepage": "https://hospi.org/",
   "repository": {
-      "type": "git",
-      "url": "https://github.com/solmon/hospi",
-      "directory": "apps/hospi-ui"
+    "type": "git",
+    "url": "https://github.com/solmon/hospi",
+    "directory": "apps/hospi-ui"
   },
   "keywords": [
-      "hospi"
+    "hospi"
   ],
   "scripts": {
     "dev": "next dev",

@@ -1,6 +1,4 @@
-"use client"
 import { ReactNode } from 'react'
-
 import {
     Badge,
     BadgeProps,
