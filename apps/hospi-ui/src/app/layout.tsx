@@ -1,4 +1,4 @@
-import {MainLayoutWrapper} from "@/components/mainlayout"
+import {MainLayoutWrapper} from "@/components/layout/mainlayout"
 import { MainLayoutProps } from '@hp-ui/landing'
 
 export default function RootLayout({

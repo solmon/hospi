@@ -1,4 +1,4 @@
-import {MainLayoutWrapper} from "@/components/mainlayout"
+import {MainLayoutWrapper} from "@/components/layout/mainlayout"
 import { MainLayoutProps } from '@hp-ui/landing'
 
 export default function RootLayout({
@@ -9,7 +9,7 @@ export default function RootLayout({
     const props: MainLayoutProps = {
       children: children
     }
-    return (
+    return (      
       <MainLayoutWrapper {...props}>      
       </MainLayoutWrapper>
     )  

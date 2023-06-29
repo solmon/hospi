@@ -132,10 +132,8 @@ export const MenuLayout: React.FC<MenuLayoutProps> = (props) => {
 
                             <SidebarSection flex="1" overflowY="auto" overflowX="hidden">
                                 <NavGroup>
-                                    <NavItem icon={<FiHome size="1.1em" />} isActive>
-                                        All users
-                                    </NavItem>
-                                    <NavItem icon={<FiStar size="1.1em" />}>Favourite users</NavItem>
+                                    <NavItem icon={<FiHome size="1.1em" />} isActive>Registration</NavItem>
+                                    <NavItem icon={<FiStar size="1.1em" />}>Search</NavItem>
                                 </NavGroup>
                             </SidebarSection>
                             <SidebarOverlay zIndex="1" />

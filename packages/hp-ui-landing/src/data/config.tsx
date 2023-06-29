@@ -8,8 +8,8 @@ import { Logo } from './logo'
 const siteConfig = {
   logo: Logo,
   seo: {
-    title: 'Saas UI',
-    description: 'The React component library for startups',
+    title: 'Hospi',
+    description: 'The hospital maintenance systems',
   } as NextSeoProps,
   termsUrl: '#',
   privacyUrl: '#',
@@ -19,14 +19,14 @@ const siteConfig = {
         id: 'features',
         label: 'Features',
       },
-      {
-        id: 'pricing',
-        label: 'Pricing',
-      },
-      {
-        id: 'faq',
-        label: 'FAQ',
-      },
+      // {
+      //   id: 'pricing',
+      //   label: 'Pricing',
+      // },
+      // {
+      //   id: 'faq',
+      //   label: 'FAQ',
+      // },
       {
         label: 'Login',
         href: '/login',
@@ -42,26 +42,26 @@ const siteConfig = {
     copyright: (
       <>
         Built by{' '}
-        <Link href="https://twitter.com/Pagebakers">Eelco Wiersma</Link>
+        <Link href="https://github.com/solmon">Solmon</Link>
       </>
     ),
     links: [
       {
-        href: 'mailto:hello@saas-ui.dev',
+        href: 'mailto:solmon@hospi.org',
         label: 'Contact',
       },
       {
-        href: 'https://twitter.com/saas_js',
+        href: 'https://twitter.com/hospi',
         label: <FaTwitter size="14" />,
       },
       {
-        href: 'https://github.com/saas-js/saas-ui',
+        href: 'https://github.com/hospi',
         label: <FaGithub size="14" />,
       },
     ],
   },
   signup: {
-    title: 'Start building with Saas UI',
+    title: 'Hospi Hospital Management',
     features: [
       {
         icon: FiCheck,

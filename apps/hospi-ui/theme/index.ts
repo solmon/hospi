@@ -1,10 +1,8 @@
 import { extendTheme } from '@chakra-ui/react'
 import { theme as basetheme} from '@hp-ui/react'
-
-import components from './components'
-import { fontSizes } from './foundations/typography'
-
-import '@fontsource/inter/variable.css'
+// import components from './components'
+// import { fontSizes } from './foundations/typography'
+// import '@fontsource/inter/variable.css'
 
 const styles = {
   global: (props: any) => ({
@@ -31,8 +29,8 @@ export default extendTheme(
       useSystemColorMode: false,
     },
     styles,
-    fontSizes,
-    components,
+    // fontSizes,
+    // components,
   },
   basetheme
 )

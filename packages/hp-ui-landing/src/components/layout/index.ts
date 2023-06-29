@@ -1,2 +1,2 @@
-export * from './layout'
+export * from './menulayout'
 export * from './mainlayout'
