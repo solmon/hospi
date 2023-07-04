@@ -20,7 +20,7 @@
             "name": "Next.js: debug server-side",
             "type": "node-terminal",
             "request": "launch",
-            "command": "npm run dev",
+            "command": "yarn run dev:web",
             "cwd": "${workspaceFolder}/apps/hospi-ui"
           },
           {
@@ -34,7 +34,7 @@
             "name": "Next.js: debug full stack",
             "type": "node-terminal",
             "request": "launch",
-            "command": "npm run dev",
+            "command": "yarn run dev:web",
             "cwd": "${workspaceFolder}/apps/hospi-ui",
             "serverReadyAction": {
               "pattern": "started server on .+, url: (https?://.+)",

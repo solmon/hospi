@@ -113,6 +113,7 @@ export const Auth: React.FC<AuthProps> = (props) => {
 
   switch (authView) {
     case VIEWS.LOGIN:
+      
       return (
         <LoginView
           providers={providers}
@@ -194,7 +195,7 @@ const AuthLink = ({ label, link, onClick }: AuthLinkProps) => {
     textAlign: 'center',
     py: 8,
     fontSize: 'md',
-  }
+  }  
   return (
     <chakra.div __css={styles}>
       {label && <chakra.span color="muted">{label}</chakra.span>}{' '}

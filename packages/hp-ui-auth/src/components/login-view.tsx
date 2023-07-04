@@ -16,6 +16,7 @@ import { AuthFormSuccess } from './success'
 export const LoginView: React.FC<AuthViewOptions & AuthFormOptions> = (
   props
 ) => {
+  
   if (props.type === 'password') {
     return <PasswordView {...props} />
   }
@@ -74,6 +75,7 @@ const PasswordView: React.FC<PasswordViewProps> = (props) => {
     providers,
     providerLabel,
     dividerLabel,
+    ...formProps
   }
 
   return (
@@ -124,6 +126,7 @@ const MagicLinkView: React.FC<MagicLinkViewProps> = (props) => {
     providers,
     providerLabel,
     dividerLabel,
+    ...formProps
   }
 
   return (
@@ -166,7 +169,7 @@ const AuthFormWrapper: React.FC<AuthFormWrapperProps> = (props) => {
   const signInWith = (provider: string) => {
     return logIn({ provider }, { redirectTo: oauthRedirectUrl })
   }
-
+  
   return (
     <AuthFormContainer {...rest}>
       {typeof title === 'string' ? (
@@ -184,7 +187,7 @@ const AuthFormWrapper: React.FC<AuthFormWrapperProps> = (props) => {
           <AuthFormDivider label={dividerLabel} />
         </>
       )}
-
+      
       {children}
 
       {footer}

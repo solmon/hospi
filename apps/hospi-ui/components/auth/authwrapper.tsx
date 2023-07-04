@@ -36,6 +36,7 @@ export const LoginWrapper = () => {
         <Container mt="40px" width="md">
             <Stack width="md">
                 <Auth providers={availableProviders} type="password" view="login">
+                    <Field name="company" label="Company" rules={{ required: true }} />
                 </Auth>
             </Stack>
         </Container>

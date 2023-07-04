@@ -144,7 +144,7 @@ export const MenuLayout: React.FC<MenuLayoutProps> = (props) => {
                     <Footer {...footerProps} />
                 }
                 children={
-                    <Box as="main" height="4000px" p="8">
+                    <Box as="main" p="8">
                         <SkipNavContent />
                         {children}
                     </Box>
