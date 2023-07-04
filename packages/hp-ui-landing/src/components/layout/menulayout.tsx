@@ -108,7 +108,7 @@ export const MenuLayout: React.FC<MenuLayoutProps> = (props) => {
                         borderRightWidth="1px"
                         position="sticky"
                         // top="48px"
-                        p="8"
+                        // p="8"
                     >
                         <Sidebar
                             breakpoints={{ base: false }}

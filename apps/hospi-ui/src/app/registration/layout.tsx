@@ -9,11 +9,11 @@ export default function RootLayout({
   // const { children,announcement, header, footer } = ...children;
   const props: MenuLayoutProps = {
     children: children,
-    announcementProps : {
-      title: 'Time',
-      description: 'Time Description',
-      href: "www.google.com"
-    }
+    // announcementProps : {
+    //   title: 'Time',
+    //   description: 'Time Description',
+    //   href: "www.google.com"
+    // }
   }
   return (
     <MenuLayoutWrapper {...props}>      

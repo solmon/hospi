@@ -10,7 +10,10 @@ export default function RootLayout({
       children: children
     }
     return (
-      <MainLayoutWrapper {...props}>      
-      </MainLayoutWrapper>
+      <>
+        {children}
+      </>
+      // <MainLayoutWrapper {...props}>      
+      // </MainLayoutWrapper>
     )  
 }
