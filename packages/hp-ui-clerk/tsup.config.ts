@@ -1,2 +1,4 @@
+import { defineConfig } from 'tsup'
 import config from '../../tsup.config'
-export default config
+
+export default defineConfig(config)

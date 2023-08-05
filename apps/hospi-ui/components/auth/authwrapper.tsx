@@ -42,17 +42,3 @@ export const LoginWrapper = () => {
         </Container>
     )
 }
-
-
-// export const PasswordWithCustomFields = () => {
-//     return (
-//         <AuthForm action="logIn" type="password">
-//       <Field
-//          name="rememberMe"
-//          type="checkbox"
-//          value="true"
-//          label="Remember me"
-//        />
-//      </AuthForm>
-//    )
-// }
