@@ -25,7 +25,7 @@
         "create:pkg": "hygen package chakra-component",
         "build:web": "yarn w hospi-ui build",
         "build:tokens": "chakra-cli tokens packages/hp-ui-theme/dist/index.mjs",
-        "build:packages": "turbo run build --concurrency=5 --no-deps --continue && yarn build:tokens",
+        "build:packages": "turbo run build --concurrency=5 --continue && yarn build:tokens",
         "clean:packages": "turbo run clean",
         "preinstall": "rm -rf node_modules/odiff-bin"
     },
@@ -77,8 +77,8 @@
         "react-test-renderer": "^18.2.0",
         "rimraf": "^4.4.1",
         "ts-node": "^10.9.1",
-        "tsup": "^6.7.0",
-        "turbo": "^1.9.8",
+        "tsup": "^8.2.4",
+        "turbo": "^2.1.1",
         "typescript": "^5.0.4",
         "vercel-submodules": "^1.0.10",
         "yup": "^1.1.1",
@@ -88,5 +88,5 @@
         "unist-util-visit": "4.0.0",
         "react": "18.2.0"
     },
-    "packageManager": "yarn@3.6.3"
+    "packageManager": "yarn@4.4.1"
 }

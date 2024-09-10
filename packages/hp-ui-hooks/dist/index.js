@@ -126,10 +126,8 @@ var useSteps = ({
   const step = steps[index];
   const inRange = (index2) => {
     if (typeof index2 === "number") {
-      if (index2 < FIRST_STEP)
-        return FIRST_STEP;
-      if (index2 >= steps.length)
-        return steps.length - 1;
+      if (index2 < FIRST_STEP) return FIRST_STEP;
+      if (index2 >= steps.length) return steps.length - 1;
       return index2;
     }
     return steps.findIndex((step2) => step2.id === index2) || FIRST_STEP;
@@ -210,5 +208,5 @@ exports.useLocalStorage = useLocalStorage;
 exports.usePromise = usePromise;
 exports.useScript = useScript;
 exports.useSteps = useSteps;
-//# sourceMappingURL=out.js.map
+//# sourceMappingURL=index.js.map
 //# sourceMappingURL=index.js.map

@@ -1,0 +1,6 @@
+corepack enable
+yarn set version stable
+yarn config set "enableStrictSsl" false -g
+make sure to delete any global yarn configurations
+turbo changes need fixes
+

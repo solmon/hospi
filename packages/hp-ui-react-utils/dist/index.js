@@ -36,12 +36,9 @@ function getChildrenOfType(children, type) {
   );
 }
 var normalize = (variant, toArray) => {
-  if (Array.isArray(variant))
-    return variant;
-  else if (typeof variant === "object")
-    return toArray == null ? void 0 : toArray(variant);
-  if (variant != null)
-    return [variant];
+  if (Array.isArray(variant)) return variant;
+  else if (typeof variant === "object") return toArray == null ? void 0 : toArray(variant);
+  if (variant != null) return [variant];
   return [];
 };
 var useResponsiveValue = (value, options) => {
@@ -55,10 +52,10 @@ exports.getChildOfType = getChildOfType;
 exports.getChildrenOfType = getChildrenOfType;
 exports.useResponsiveValue = useResponsiveValue;
 Object.keys(utils).forEach(function (k) {
-  if (k !== 'default' && !exports.hasOwnProperty(k)) Object.defineProperty(exports, k, {
+  if (k !== 'default' && !Object.prototype.hasOwnProperty.call(exports, k)) Object.defineProperty(exports, k, {
     enumerable: true,
     get: function () { return utils[k]; }
   });
 });
-//# sourceMappingURL=out.js.map
+//# sourceMappingURL=index.js.map
 //# sourceMappingURL=index.js.map

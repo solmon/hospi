@@ -14,12 +14,9 @@ function getChildrenOfType(children, type) {
   );
 }
 var normalize = (variant, toArray) => {
-  if (Array.isArray(variant))
-    return variant;
-  else if (typeof variant === "object")
-    return toArray == null ? void 0 : toArray(variant);
-  if (variant != null)
-    return [variant];
+  if (Array.isArray(variant)) return variant;
+  else if (typeof variant === "object") return toArray == null ? void 0 : toArray(variant);
+  if (variant != null) return [variant];
   return [];
 };
 var useResponsiveValue = (value, options) => {
@@ -30,5 +27,5 @@ var useResponsiveValue = (value, options) => {
 };
 
 export { getChildOfType, getChildrenOfType, useResponsiveValue };
-//# sourceMappingURL=out.js.map
+//# sourceMappingURL=index.mjs.map
 //# sourceMappingURL=index.mjs.map
